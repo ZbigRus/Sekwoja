@@ -67,7 +67,7 @@ export default function Contact() {
           <div className="flex items-center gap-2">
             <LocationIcon />
             <span className="text-lg font-medium">
-              ul. Przemysłowa 139-200 Dębica
+              ul. Przemysłowa 1, 39-200 Dębica
             </span>
           </div>
           <div className="flex items-center gap-2">

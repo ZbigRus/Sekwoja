@@ -46,14 +46,12 @@ export default function Nav() {
         />
       </button>
       <nav
-        className={`absolute md:relative shadow md:shadow-none flex-col md:flex-row flex items-center md:gap-[calc(2rem+1vw)] bg-white right-0 left-0 top-full md:top-0 pb-4 md:pb-0 transition-opacity ${
+        className={`absolute md:relative shadow md:shadow-none flex-col md:flex-row flex items-center md:gap-[2vw] 2xl:gap-[2vw] bg-white right-0 left-0 top-full md:top-0 pb-4 md:pb-0 transition-opacity ${
           isActive ? "opacity-100" : " opacity-0 pointer-events-none"
         } md:opacity-100 md:pointer-events-auto`}
       >
         {LINKS.map((link) => (
-          <NavLink title={link} key={link}>
-            {link}
-          </NavLink>
+          <NavLink {...link} key={link.title} />
         ))}
       </nav>
     </Fragment>

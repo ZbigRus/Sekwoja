@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={urbanist.className}>
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-[calc(100vh-7rem)]">{children}</main>
         <Footer />
       </body>
     </html>

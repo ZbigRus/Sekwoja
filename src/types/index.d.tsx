@@ -1,3 +1,8 @@
+type NavLink = {
+  title: string;
+  href: string;
+};
+
 type Category = {
   title: string;
   icon: React.ReactNode;

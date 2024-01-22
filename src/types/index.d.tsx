@@ -19,3 +19,15 @@ type Advantage = {
   title: string;
   icon: React.ReactNode;
 };
+
+type Post = {
+  title: string;
+  content: string;
+  uri: string;
+  date: Date;
+  featuredImage: { node: FeaturedImage };
+};
+
+type FeaturedImage = {
+  sourceUrl: string;
+};

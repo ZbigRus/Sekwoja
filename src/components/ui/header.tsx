@@ -1,8 +1,6 @@
 import CalendarIcon from "@/assets/icons/calendar";
 import Button from "./button";
 import PhoneIcon from "@/assets/icons/phone";
-import NavLink from "./nav-link";
-import { LINKS } from "@/const/general";
 import Image from "next/image";
 import { logo } from "@/assets/images";
 import Link from "next/link";

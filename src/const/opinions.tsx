@@ -1,20 +1,20 @@
 export const OPINIONS: Opinion[] = [
   {
     content:
-      "Każdy mebel, który zakupiłem od Sekwoi, spełnił moje oczekiwania pod względem trwałości i funkcjonalności. Jestem zachwycony jakością produktów i usług tej firmy i zdecydowanie polecam ją każdemu, kto poszukuje wysokiej jakości mebli.",
-    author: "Wojciech Frizbi",
-    rating: "4.9",
+      "Polecam! Bardzo profesjonalne podejście do oczekiwań oraz możliwość realizacji dosłownie każdego marzenia  w kwestii wyglądu mebli, wszystko super.",
+    author: "Violeta Czerwonka",
+    rating: "5.0",
   },
   {
     content:
-      "Każdy mebel, który zakupiłem od Sekwoi, spełnił moje oczekiwania pod względem trwałości i funkcjonalności. Jestem zachwycony jakością produktów i usług tej firmy i zdecydowanie polecam ją każdemu, kto poszukuje wysokiej jakości mebli.",
-    author: "Wojciech Frizbi",
-    rating: "4.9",
+      "Jestem bardzo zadowolony z realizacji mojego zamówienia. Potrzebowałem dorobić boczki do mojego amplitunera vintage i nie musiałem kupować całej płyty jak to u konkurencji bywa. Polecam.",
+    author: "Krzysztof Gorecki",
+    rating: "5.0",
   },
   {
     content:
-      "Każdy mebel, który zakupiłem od Sekwoi, spełnił moje oczekiwania pod względem trwałości i funkcjonalności. Jestem zachwycony jakością produktów i usług tej firmy i zdecydowanie polecam ją każdemu, kto poszukuje wysokiej jakości mebli.",
-    author: "Wojciech Frizbi",
-    rating: "4.9",
+      "Super firma :) Jestem bardzo zadowolony zarówno z miłej obsługi jak i z mebli. Bardzo dobre wykonanie i szybka realizacja zamówienia. Polecam wszystkim, 👍🏻",
+    author: "Jaromir Zmuda",
+    rating: "5.0",
   },
 ];

@@ -3,7 +3,7 @@ import LocationIcon from "@/assets/icons/location";
 import MailIcon from "@/assets/icons/mail";
 import Input from "../../ui/input";
 import Image from "next/image";
-import { contactMan } from "@/assets/images";
+import { contactWoman } from "@/assets/images";
 import nodemailer from "nodemailer";
 import SubmitButton from "./submit-button";
 
@@ -110,7 +110,12 @@ export default function Contact() {
           </form>
         </div>
         <div className="absolute left-0 right-0 xl:w-full bg-[#F7F3E5] rounded-l-xl h-[3.4in] flex justify-end items-end w-screen xl:pr-12 -z-10">
-          <Image className="hidden xl:block" src={contactMan} alt="Employer" />
+          <Image
+            height={420}
+            className="hidden xl:block"
+            src={contactWoman}
+            alt="Employer"
+          />
         </div>
       </div>
     </section>

@@ -9,8 +9,8 @@ export default function Opinions() {
         Co mowią o nas klienci
       </h2>
       <p className="text-white/80 text-sm">
-        Lorem ipsum dolor sit amet consectetur. Nam gravida lacinia nisl eu
-        nulla pretium maecenas eget pulvinar.
+        Opinie klientów to nasza największa rekomendacja - dowiedz się, dlaczego
+        nasze meble zdobywają serca i domy
       </p>
       <div className="mt-8 flex flex-col gap-6 lg:grid grid-cols-3">
         {OPINIONS.map((opinion, i) => (
@@ -29,17 +29,18 @@ export default function Opinions() {
 
 function OpinionRef({ content, author, rating }: Opinion) {
   return (
-    <div className="bg-secondary-dark rounded px-8 pb-10 pt-8 flex flex-col gap-4">
-      <span className="text-primary text-4xl leading-none h-[24px]">“</span>
-      <blockquote className="text-sm text-white/80">{content}</blockquote>
+    <div className="bg-secondary-dark rounded px-8 pb-10 pt-8 flex flex-col gap-4 justify-between">
+      <div className="flex flex-col gap-4">
+        <span className="text-primary text-4xl leading-none h-[24px]">“</span>
+        <blockquote className="text-white/80 leading-relaxed">
+          {content}
+        </blockquote>
+      </div>
       <div className="flex items-center justify-between gap-4 flex-wrap mt-2">
-        <div className="flex items-center gap-2">
-          <div className="rounded-full h-8 w-8 bg-background-dark"></div>
-          <span className="text-[12px] text-white">{author}</span>
-        </div>
+        <span className="text-sm text-white">{author}</span>
         <div className="flex items-center gap-2">
           <StarIcon />
-          <span className="text-[12px] text-white font-medium">{rating}</span>
+          <span className="text-sm text-white font-medium">{rating}</span>
         </div>
       </div>
     </div>

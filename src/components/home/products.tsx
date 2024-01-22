@@ -9,8 +9,8 @@ export default function Products() {
         Odkryj kolekcje cieszące oko
       </h2>
       <p className="text-[#1C1C1C]/80 text-sm px-[8vw] sm:px-0">
-        Lorem ipsum dolor sit amet consectetur. Nam gravida lacinia nisl eu
-        nulla pretium maecenas eget pulvinar.
+        Przeglądaj nasze kategorie mebli, aby znaleźć idealne rozwiązanie
+        dopasowane do Twojego gustu i potrzeb.
       </p>
       <div className="grid grid-cols-2 lg:grid-cols-4 mt-8">
         {CATEGORIES.map((category, i) => (

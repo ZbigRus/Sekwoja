@@ -9,10 +9,10 @@ import Opinions from "@/components/home/opinions";
 import Partners from "@/components/home/partners";
 import Products from "@/components/home/products";
 import Sofa from "@/components/home/sofa";
-import { getRecentPosts } from "@/lib/blog/actions";
+import { getPosts } from "@/lib/blog/actions";
 
 export default async function Home() {
-  const { data } = await getRecentPosts();
+  const { data } = await getPosts(3);
   return (
     <div className="flex flex-col">
       <Hero />

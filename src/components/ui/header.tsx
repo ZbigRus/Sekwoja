@@ -18,7 +18,7 @@ export default function Header() {
       <div className="items-center gap-2 hidden md:flex pl-3 border-l-[1px] border-[#E2E2E2]">
         <div className="flex items-center mr-3">
           <Link
-            href="https://www.facebook.com/sekwoja.debica"
+            href="https://www.instagram.com/sekwoja_mebeldesign/"
             target="_blank"
             className="fill-font h-8 w-8 flex items-center justify-center"
           >

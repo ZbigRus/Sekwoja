@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import NextTopLoader from "nextjs-toploader";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-[calc(100vh-7rem)]">{children}</main>
         <Footer />
+        <NextTopLoader color="#019843" />
       </body>
     </html>
   );

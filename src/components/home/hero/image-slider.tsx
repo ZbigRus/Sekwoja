@@ -34,7 +34,7 @@ export default function ImageSlider({
 
   return (
     <Fragment>
-      <div className="lg:absolute lg:inset-0 lg:w-full lg:h-full grid grid-cols-1 lg:grid-cols-[4fr_5fr] flex-1">
+      <div className="lg:absolute lg:inset-0 lg:w-full lg:h-full grid grid-cols-1 lg:grid-cols-2 flex-1">
         <div className="bg-background-dark hidden lg:block"></div>
         <div className="w-full h-full relative">
           <Image

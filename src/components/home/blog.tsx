@@ -2,8 +2,15 @@ import ArrowRightIcon from "@/assets/icons/arrow-right";
 import CalendarIcon from "@/assets/icons/calendar";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../ui/button";
 
-export default function Blog({ posts }: { posts: Post[] }) {
+export default function Blog({
+  posts,
+  hideButton,
+}: {
+  posts: Post[];
+  hideButton?: boolean;
+}) {
   if (posts.length === 0) return;
   return (
     <section className="flex flex-col gap-4 sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1in]">
@@ -18,11 +25,23 @@ export default function Blog({ posts }: { posts: Post[] }) {
           <PostRef {...item} key={item.uri} />
         ))}
       </div>
+      {!hideButton && (
+        <Link href="/blog">
+          <Button
+            asChild
+            className="mt-4 w-max stroke-secondary"
+            variant="secondary"
+          >
+            Pokaż wszystkie wpisy
+            <ArrowRightIcon />
+          </Button>
+        </Link>
+      )}
     </section>
   );
 }
 
-function PostRef({ title, content, uri, date, featuredImage }: Post) {
+function PostRef({ title, uri, date, featuredImage }: Post) {
   return (
     <div className="bg-light rounded-xl overflow-hidden grid grid-rows-[2in_1fr]">
       <div className="w-full h-full relative">
@@ -49,7 +68,7 @@ function PostRef({ title, content, uri, date, featuredImage }: Post) {
           nulla pretium maecenas eget pulvinar.
         </p>
         <Link
-          href={uri}
+          href={`/blog${uri}`}
           className="stroke-secondary flex items-center gap-2 text-sm mt-auto"
         >
           Czytaj całość

@@ -27,7 +27,7 @@ export default function Blog({
           ? "Przeglądaj nasze pozostałe wpisy"
           : "Blog - inspiracje i praktyczne porady"}
       </h2>
-      <p className="text-[#1C1C1C]/80 text-sm">
+      <p className="text-[#1C1C1C]/80 text-sm ">
         Skarbnica pomysłów na wyjątkowe wnętrza i długotrwałe meble
       </p>
       <Suspense fallback={<PostLoader />}>

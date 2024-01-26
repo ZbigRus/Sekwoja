@@ -3,28 +3,40 @@ import CalendarIcon from "@/assets/icons/calendar";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../ui/button";
+import { Suspense } from "react";
+import PostLoader from "./blog/post-loader";
 
 export default function Blog({
   posts,
+  suggestion,
   hideButton,
 }: {
   posts: Post[];
   hideButton?: boolean;
+  suggestion?: boolean;
 }) {
   if (posts.length === 0) return;
   return (
-    <section className="flex flex-col gap-4 sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1in]">
-      <h2 className="font-medium text-2xl xl:text-3xl px-[8vw] sm:px-0">
-        Blog - inspiracje i praktyczne porady
+    <section
+      className={`flex flex-col gap-4 px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1in] ${
+        suggestion ? "bg-light" : "bg-white"
+      }`}
+    >
+      <h2 className="font-medium text-2xl xl:text-3xl">
+        {suggestion
+          ? "Przeglądaj nasze pozostałe wpisy"
+          : "Blog - inspiracje i praktyczne porady"}
       </h2>
-      <p className="text-[#1C1C1C]/80 text-sm px-[8vw] sm:px-0">
+      <p className="text-[#1C1C1C]/80 text-sm">
         Skarbnica pomysłów na wyjątkowe wnętrza i długotrwałe meble
       </p>
-      <div className="grid grid-cols-3 mt-8 gap-8">
-        {posts.map((item) => (
-          <PostRef {...item} key={item.uri} />
-        ))}
-      </div>
+      <Suspense fallback={<PostLoader />}>
+        <div className="flex flex-col md:grid grid-cols-3 mt-8 gap-8">
+          {posts.map((item) => (
+            <PostRef {...item} suggestion={suggestion} key={item.uri} />
+          ))}
+        </div>
+      </Suspense>
       {!hideButton && (
         <Link href="/blog">
           <Button
@@ -41,9 +53,19 @@ export default function Blog({
   );
 }
 
-function PostRef({ title, uri, date, featuredImage }: Post) {
+function PostRef({
+  title,
+  uri,
+  date,
+  featuredImage,
+  suggestion,
+}: Post & { suggestion?: boolean }) {
   return (
-    <div className="bg-light rounded-xl overflow-hidden grid grid-rows-[2in_1fr]">
+    <div
+      className={`${
+        suggestion ? "bg-white" : "bg-light"
+      } rounded-xl overflow-hidden grid grid-rows-[2in_1fr]`}
+    >
       <div className="w-full h-full relative">
         {featuredImage && (
           <Image

@@ -7,3 +7,22 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+#content * {
+  width: 100%;
+}
+
+#content img {
+  width: 100% !important;
+  max-height: 5in;
+  object-position: center;
+  border-radius: 8px;
+}
+
+#content figure {
+  margin: 1rem 0;
+}
+
+#content p {
+  line-height: 200%;
+}

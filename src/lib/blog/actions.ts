@@ -25,6 +25,7 @@ export async function getPosts(limit?: number) {
         query
       )}`
     );
+    console.log(response);
     const json = await response.json();
     return { data: json.data };
   } catch (err) {

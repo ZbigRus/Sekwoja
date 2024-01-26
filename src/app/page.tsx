@@ -12,7 +12,7 @@ import Sofa from "@/components/home/sofa";
 import { getPosts } from "@/lib/blog/actions";
 
 export default async function Home() {
-  const { data } = await getPosts(3);
+  // const { data } = await getPosts(3);
   return (
     <div className="flex flex-col">
       <Hero />
@@ -21,7 +21,7 @@ export default async function Home() {
       <Opinions />
       <Kitchen />
       <Advantages />
-      <Blog posts={data?.posts?.nodes || []} />
+      {/* <Blog posts={data?.posts?.nodes || []} /> */}
       <Sofa />
       <Furniture />
       <Partners />

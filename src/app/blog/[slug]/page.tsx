@@ -6,38 +6,39 @@ import Contact from "@/components/home/contact/contact";
 import Blog from "@/components/home/blog";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  const { data, error } = await getSinglePost(slug);
-  const { data: recent } = await getPosts(3, data.post.id);
+  // const { slug } = params;
+  // const { data, error } = await getSinglePost(slug);
+  // const { data: recent } = await getPosts(3, data.post.id);
 
-  if (error) throw new Error(error);
+  // if (error) throw new Error(error);
 
-  const { date, title, content } = data.post;
+  // const { date, title, content } = data.post;
 
   return (
-    <div>
-      <div className="bg-light flex-1 pt-8 px-0 sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw]">
-        <div className="bg-white rounded-xl px-[8vw] sm:px-12 py-12 flex flex-col gap-4">
-          <div className="flex items-center gap-2 fill-secondary">
-            <CalendarIcon />
-            <span className="text-sm opacity-80 font-medium">
-              {new Date(date).toLocaleDateString()}
-            </span>
-          </div>
-          <h1 className="text-2xl md:text-3xl xl:text-4xl font-medium">
-            {title}
-          </h1>
-          <div
-            id="content"
-            className="flex flex-col gap-4"
-            dangerouslySetInnerHTML={{ __html: content }}
-          ></div>
-        </div>
-      </div>
-      <Blog posts={recent?.posts?.nodes || []} suggestion />
-      <Banner />
-      <Partners />
-      <Contact />
-    </div>
+    // <div>
+    //   <div className="bg-light flex-1 pt-8 px-0 sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw]">
+    //     <div className="bg-white rounded-xl px-[8vw] sm:px-12 py-12 flex flex-col gap-4">
+    //       <div className="flex items-center gap-2 fill-secondary">
+    //         <CalendarIcon />
+    //         <span className="text-sm opacity-80 font-medium">
+    //           {new Date(date).toLocaleDateString()}
+    //         </span>
+    //       </div>
+    //       <h1 className="text-2xl md:text-3xl xl:text-4xl font-medium">
+    //         {title}
+    //       </h1>
+    //       <div
+    //         id="content"
+    //         className="flex flex-col gap-4"
+    //         dangerouslySetInnerHTML={{ __html: content }}
+    //       ></div>
+    //     </div>
+    //   </div>
+    //   <Blog posts={recent?.posts?.nodes || []} suggestion />
+    //   <Banner />
+    //   <Partners />
+    //   <Contact />
+    // </div>
+    <></>
   );
 }

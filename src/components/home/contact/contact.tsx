@@ -81,12 +81,12 @@ export default function Contact() {
         </div>
       </div>
       <div className="xl:relative flex items-center px-[8vw] sm:px-0 xl:px-12 gap-12">
-        <div className="bg-white rounded-xl shadow-[0px_20px_40px_rgba(17,27,22,0.08)] py-10 px-8 flex flex-col gap-4 xl:w-max w-full min-h-[120%]">
+        <div className="bg-white rounded-xl shadow-[0px_20px_40px_rgba(17,27,22,0.08)] py-10 px-8 flex flex-col gap-4 xl:w-max w-full min-h-[120%] xl:max-w-[62%]">
           <h3 className="text-[22px] mb-4 font-medium">
             Wypełnij formularz, odezwiemy się!
           </h3>
           <form
-            className="flex flex-col gap-x-4 gap-y-6 sm:grid grid-cols-2 min-w-max"
+            className="flex flex-col gap-x-4 gap-y-6 sm:grid grid-cols-2 min-w-max xl:min-w-0 w-full"
             action={sendMail}
           >
             <Input required name="first-name" label="Imię" />
@@ -112,7 +112,7 @@ export default function Contact() {
         <div className="absolute left-0 right-0 xl:w-full bg-[#F7F3E5] rounded-l-xl h-[3.4in] flex justify-end items-end w-screen xl:pr-12 -z-10">
           <Image
             height={420}
-            className="hidden xl:block"
+            className="hidden xl:block w-1/3 max-w-[3.2in]"
             src={contactWoman}
             alt="Employer"
           />

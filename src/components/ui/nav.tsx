@@ -1,9 +1,12 @@
 "use client";
 
 import { LINKS } from "@/const/general";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import NavLink from "./nav-link";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import InstagramIcon from "@/assets/icons/ig";
+import FacebookIcon from "@/assets/icons/fb";
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(false);
@@ -14,7 +17,23 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <Fragment>
+    <div className="flex items-center">
+      <div className="flex items-center px-3 md:hidden border-l-[1px] border-[#E2E2E2]">
+        <Link
+          href="https://www.instagram.com/sekwoja_mebeldesign/"
+          target="_blank"
+          className="fill-font h-8 w-8 flex items-center justify-center"
+        >
+          <InstagramIcon />
+        </Link>
+        <Link
+          href="https://www.facebook.com/sekwoja.debica"
+          target="_blank"
+          className="fill-font h-8 w-8 flex items-center justify-center"
+        >
+          <FacebookIcon />
+        </Link>
+      </div>
       <button
         onClick={() => setIsActive((prev) => !prev)}
         className="flex flex-col gap-1.5 justify-center relative md:hidden"
@@ -30,7 +49,7 @@ export default function Nav() {
           } transition-opacity`}
         />
         <div
-          className={`w-7 bg-secondary h-[3px] rounded ${
+          className={`w-5 self-end bg-secondary h-[3px] rounded ${
             isActive ? "opacity-0" : "opacity-100"
           } transition-opacity`}
         />
@@ -54,6 +73,6 @@ export default function Nav() {
           <NavLink {...link} key={link.title} />
         ))}
       </nav>
-    </Fragment>
+    </div>
   );
 }

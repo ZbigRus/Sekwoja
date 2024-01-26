@@ -10,7 +10,7 @@ import FacebookIcon from "@/assets/icons/fb";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-20 bg-white border-[#E2E2E2] border-b-[1px] flex items-center justify-between px-[8vw] md:px-[4vw] 2xl:px-[16vw] h-[64px] md:h-[72px] -ml-4">
+    <header className="sticky top-0 z-20 bg-white border-[#E2E2E2] border-b-[1px] flex items-center justify-between px-[8vw] md:px-[4vw] 2xl:px-[16vw] h-[60px] md:h-[72px] -ml-4">
       <Link href="/">
         <Image width={96} height={48} src={logo} alt="Sekwoja Logo" />
       </Link>
@@ -18,7 +18,7 @@ export default function Header() {
       <div className="items-center gap-2 hidden md:flex pl-3 border-l-[1px] border-[#E2E2E2]">
         <div className="flex items-center mr-3">
           <Link
-            href="https://www.facebook.com/sekwoja.debica"
+            href="https://www.instagram.com/sekwoja_mebeldesign/"
             target="_blank"
             className="fill-font h-8 w-8 flex items-center justify-center"
           >

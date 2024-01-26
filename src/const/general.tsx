@@ -16,8 +16,8 @@ export const LINKS: NavLink[] = [
     href: "/materialy",
   },
   {
-    title: "Projektowanie",
-    href: "/projektowanie",
+    title: "Blog",
+    href: "/blog",
   },
   {
     title: "Kontakt",

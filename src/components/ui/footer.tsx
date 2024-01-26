@@ -18,7 +18,7 @@ export default function Footer() {
       </nav>
       <div className="flex flex-wrap items-center gap-4">
         <Link
-          href="https://www.facebook.com/sekwoja.debica"
+          href="https://www.instagram.com/sekwoja_mebeldesign/"
           target="_blank"
           className="h-11 w-11 fill-white rounded border-[1px] border-[#464646] grid place-content-center"
         >

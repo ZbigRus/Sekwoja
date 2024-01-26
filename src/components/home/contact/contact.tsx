@@ -29,7 +29,7 @@ export default function Contact() {
         transporter.sendMail(
           {
             from: user,
-            to: user,
+            to: "filfer05@gmail.com",
             subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - Sekwoja`,
             text: `
             Imię: ${firstName}

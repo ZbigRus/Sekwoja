@@ -10,42 +10,42 @@ import WardrobeIcon from "@/assets/icons/furniture/wardrobe";
 export const CATEGORIES: Category[] = [
   {
     title: "Szafy",
-    link: "/",
+    link: "/szafy",
     icon: <WardrobeIcon />,
   },
   {
     title: "Sypialnie",
-    link: "/",
+    link: "/sypialnie",
     icon: <BedroomIcon />,
   },
   {
     title: "Łóżka tapicerowane",
-    link: "/",
+    link: "/lozka-tapicerowane",
     icon: <BedIcon />,
   },
   {
     title: "Biurowe",
-    link: "/",
+    link: "/biurowe",
     icon: <OfficeIcon />,
   },
   {
     title: "Kuchenne",
-    link: "/",
+    link: "/kuchenne",
     icon: <KitchenIcon />,
   },
   {
     title: "Łazienkowe",
-    link: "/",
+    link: "/lazienkowe",
     icon: <BathroomIcon />,
   },
   {
     title: "Pokojowe",
-    link: "/",
+    link: "/pokojowe",
     icon: <LivingRoomIcon />,
   },
   {
     title: "Sklepowe",
-    link: "/",
+    link: "/sklepowe",
     icon: <ShopIcon />,
   },
 ];

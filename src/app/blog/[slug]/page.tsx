@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <div className="bg-light flex-1 py-8 px-0 sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw]">
+      <div className="bg-light flex-1 pt-8 px-0 sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw]">
         <div className="bg-white rounded-xl px-[8vw] sm:px-12 py-12 flex flex-col gap-4">
           <div className="flex items-center gap-2 fill-secondary">
             <CalendarIcon />

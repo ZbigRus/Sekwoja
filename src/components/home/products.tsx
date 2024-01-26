@@ -21,11 +21,16 @@ export default function Products() {
   );
 }
 
-function CategoryRef({ index, title, icon }: Category & { index: number }) {
+function CategoryRef({
+  index,
+  title,
+  link,
+  icon,
+}: Category & { index: number }) {
   const Icon = () => icon;
   return (
     <Link
-      href="/"
+      href={`/meble${link}`}
       className={`bg-white [&:nth-child(4n-3)]:bg-[#F7F8F8] [&:nth-child(4n)]:bg-[#F7F8F8] ${
         index > 3
           ? "lg:even:bg-[#F7F8F8] lg:odd:!bg-white"

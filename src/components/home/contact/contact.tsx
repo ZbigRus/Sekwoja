@@ -4,58 +4,10 @@ import MailIcon from "@/assets/icons/mail";
 import Input from "../../ui/input";
 import Image from "next/image";
 import { contactWoman } from "@/assets/images";
-import nodemailer from "nodemailer";
 import SubmitButton from "./submit-button";
+import { sendMail } from "@/lib/contact/actions";
 
 export default function Contact({ defaultType }: { defaultType?: string }) {
-  async function sendMail(data: FormData) {
-    "use server";
-    const firstName = data.get("first-name")?.toString();
-    const lastName = data.get("last-name")?.toString();
-    const email = data.get("email")?.toString();
-    const phone = data.get("phone")?.toString();
-    const message = data.get("message")?.toString();
-    const type = data.get("type")?.toString();
-    const user = process.env.NEXT_PUBLIC_EMAIL;
-    const pass = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user,
-        pass,
-      },
-    });
-    try {
-      await new Promise((resolve, reject) => {
-        transporter.sendMail(
-          {
-            from: user,
-            to: "filfer05@gmail.com",
-            subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - Sekwoja`,
-            text: `
-            Imię: ${firstName}
-            Nazwisko: ${lastName}
-            Numer telefonu: ${phone}
-            Email: ${email}
-            Powód kontaktu: ${type === "measurement" ? "Pomiar" : "Rozmowa"}
-            Message: ${message}
-        `,
-          },
-          (error, info) => {
-            if (error) {
-              console.log({ error });
-              reject(error);
-            } else {
-              resolve(info);
-            }
-          }
-        );
-      });
-    } catch (err) {
-      console.log({ err });
-    }
-  }
-
   return (
     <section className="py-[0.8in] lg:py-[1in] sm:px-[8vw] md:px-[4vw] 2xl:pl-[16vw] xl:pr-0 flex flex-col gap-8 xl:gap-16 xl:items-center xl:grid grid-cols-[1fr_2fr] overflow-hidden">
       <div className="flex flex-col gap-4 px-[8vw] sm:px-0">
@@ -119,7 +71,7 @@ export default function Contact({ defaultType }: { defaultType?: string }) {
                   name="type"
                   value="measurement"
                   id="measurement"
-                  defaultChecked={defaultType === "measurement"}
+                  defaultChecked={defaultType !== "call"}
                   required
                 />
                 <span className="select-none">Zamawiam pomiar</span>

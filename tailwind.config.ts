@@ -1,11 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
@@ -16,6 +12,10 @@ const config: Config = {
         font: "#1C1C1C",
         "background-dark": "#111B16",
         "background-light": "#F7F3E5BF",
+      },
+      backgroundImage: {
+        skeleton:
+          "linear-gradient(0deg, rgba(28, 28, 28, 0.35) 0%, rgba(28, 28, 28, 0.35) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
       },
     },
   },

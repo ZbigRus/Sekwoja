@@ -2,6 +2,7 @@ import CalendarIcon from "@/assets/icons/calendar";
 import Button from "../ui/button";
 import Image from "next/image";
 import { slider1 } from "@/assets/images/hero/hero";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -9,9 +10,11 @@ export default function Banner() {
       <h2 className="font-medium text-2xl xl:text-3xl text-white text-center lg:text-left">
         Skontaktuj się z naszym specjalistą
       </h2>
-      <Button className="fill-secondary">
-        <CalendarIcon /> Zamów pomiar
-      </Button>
+      <Link href="/kontakt">
+        <Button asChild className="fill-secondary">
+          <CalendarIcon /> Zamów pomiar
+        </Button>
+      </Link>
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
           objectFit="cover"

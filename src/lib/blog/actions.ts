@@ -1,11 +1,12 @@
 "use server";
 
-async function getQuery(query: string) {
+async function getQuery(query: string, options?: RequestInit) {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}?query=${encodeURIComponent(
         query
-      )}`
+      )}`,
+      options
     );
     const json = await response.json();
     return {
@@ -40,7 +41,7 @@ export async function getPosts(limit?: number, exclude?: string) {
             }
         }
     `;
-  const response = await getQuery(query);
+  const response = await getQuery(query, { next: { revalidate: 3600 } });
   return response;
 }
 

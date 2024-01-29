@@ -7,6 +7,14 @@ type Category = {
   title: string;
   icon: React.ReactNode;
   link: string;
+  hero: Section;
+  desc: Section;
+};
+
+type Section = {
+  title: string;
+  content: React.ReactNode;
+  media: string[];
 };
 
 type Opinion = {

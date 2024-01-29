@@ -2,6 +2,7 @@ import CalendarIcon from "@/assets/icons/calendar";
 import Button from "../../ui/button";
 import PhoneIcon from "@/assets/icons/phone";
 import ImageSlider from "./image-slider";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -16,12 +17,16 @@ export default function Hero() {
             wnętrzu niepowtarzalny charakter.
           </p>
           <div className="flex items-center gap-2 mt-6 flex-wrap">
-            <Button className="fill-secondary w-max" variant="secondary">
-              <PhoneIcon /> Zamów rozmowę
-            </Button>
-            <Button className="fill-secondary w-max">
-              <CalendarIcon /> Zamów pomiar
-            </Button>
+            <Link href="/kontakt?type=call">
+              <Button className="fill-secondary w-max" variant="secondary">
+                <PhoneIcon /> Zamów rozmowę
+              </Button>
+            </Link>
+            <Link href="/kontakt">
+              <Button className="fill-secondary w-max">
+                <CalendarIcon /> Zamów pomiar
+              </Button>
+            </Link>
           </div>
         </div>
       </ImageSlider>

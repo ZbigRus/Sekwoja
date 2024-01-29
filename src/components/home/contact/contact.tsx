@@ -7,7 +7,7 @@ import { contactWoman } from "@/assets/images";
 import nodemailer from "nodemailer";
 import SubmitButton from "./submit-button";
 
-export default function Contact() {
+export default function Contact({ defaultType }: { defaultType?: string }) {
   async function sendMail(data: FormData) {
     "use server";
     const firstName = data.get("first-name")?.toString();
@@ -15,6 +15,7 @@ export default function Contact() {
     const email = data.get("email")?.toString();
     const phone = data.get("phone")?.toString();
     const message = data.get("message")?.toString();
+    const type = data.get("type")?.toString();
     const user = process.env.NEXT_PUBLIC_EMAIL;
     const pass = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
     const transporter = nodemailer.createTransport({
@@ -36,6 +37,7 @@ export default function Contact() {
             Nazwisko: ${lastName}
             Numer telefonu: ${phone}
             Email: ${email}
+            Powód kontaktu: ${type === "measurement" ? "Pomiar" : "Rozmowa"}
             Message: ${message}
         `,
           },
@@ -86,7 +88,7 @@ export default function Contact() {
             Wypełnij formularz, odezwiemy się!
           </h3>
           <form
-            className="flex flex-col gap-x-4 gap-y-6 sm:grid grid-cols-2 min-w-max xl:min-w-0 w-full"
+            className="flex flex-col gap-x-4 gap-y-6 sm:grid grid-cols-2 w-full"
             action={sendMail}
           >
             <Input required name="first-name" label="Imię" />
@@ -104,7 +106,35 @@ export default function Contact() {
                 className="rounded-md border-[1px] border-[#E2E2E2] px-4 py-3 !outline-none text-sm w-full"
                 id="message"
                 name="message"
+                required
               />
+            </div>
+            <div className="col-span-2 flex items-center gap-4">
+              <label
+                className="text-sm flex items-center gap-2"
+                htmlFor="measurement"
+              >
+                <input
+                  type="radio"
+                  name="type"
+                  value="measurement"
+                  id="measurement"
+                  defaultChecked={defaultType === "measurement"}
+                  required
+                />
+                <span className="select-none">Zamawiam pomiar</span>
+              </label>
+              <label className="text-sm flex items-center gap-2" htmlFor="call">
+                <input
+                  type="radio"
+                  name="type"
+                  value="call"
+                  id="call"
+                  defaultChecked={defaultType === "call"}
+                  required
+                />
+                <span className="select-none">Zamawiam rozmowę</span>
+              </label>
             </div>
             <SubmitButton />
           </form>

@@ -32,7 +32,7 @@ export default function Header() {
             <FacebookIcon />
           </Link>
         </div>
-        <Link href="/kontakt">
+        <Link href="/kontakt?type=call">
           <Button asChild className="fill-secondary" variant="secondary">
             <PhoneIcon /> Zamów rozmowę
           </Button>

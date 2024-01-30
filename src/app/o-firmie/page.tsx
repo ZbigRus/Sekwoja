@@ -1,3 +1,4 @@
+import { skeleton } from "@/assets/images";
 import LearnMore from "@/components/about/learn-more";
 import ProductsBanner from "@/components/about/products-banner";
 import Quality from "@/components/about/quality";
@@ -20,6 +21,7 @@ export default function Page() {
             ]}
           />
         }
+        media={[skeleton.src]}
       />
       <Quality />
       <ProductsBanner />

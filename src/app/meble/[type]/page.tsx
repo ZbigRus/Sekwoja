@@ -7,10 +7,9 @@ export default function Page({ params }: { params: { type: string } }) {
   const props = CATEGORIES.find((item) => item.link === `/${params.type}`);
   if (!props) return redirect("/meble");
   const { hero, desc } = props;
-  const { title, content } = hero;
   return (
     <div>
-      <Skeleton title={title} content={content} />
+      <Skeleton {...hero} />
       <Desc {...desc} />
     </div>
   );

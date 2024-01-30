@@ -6,6 +6,7 @@ import LivingRoomIcon from "@/assets/icons/furniture/living-room";
 import OfficeIcon from "@/assets/icons/furniture/office";
 import ShopIcon from "@/assets/icons/furniture/shop";
 import WardrobeIcon from "@/assets/icons/furniture/wardrobe";
+import { bathroom, kitchen, wardrobe } from "@/assets/images/[type]";
 import Content from "@/components/furniture/content";
 
 export const CATEGORIES: Category[] = [
@@ -23,10 +24,10 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [wardrobe.src],
     },
     desc: {
-      title: "Szafy",
+      title: "Kolekcja szaf",
       content: (
         <Content
           paragraphs={[
@@ -139,7 +140,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [kitchen.src],
     },
     desc: {
       title: "Meble kuchenne",
@@ -168,7 +169,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [bathroom.src],
     },
     desc: {
       title: "Meble łazienkowe",

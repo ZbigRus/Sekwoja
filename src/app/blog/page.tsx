@@ -5,13 +5,13 @@ import Contact from "@/components/home/contact/contact";
 import { getPosts } from "@/lib/blog/actions";
 
 export default async function Page() {
-  // const { data } = await getPosts();
+  const { data } = await getPosts();
   return (
     <div>
-      {/* <Blog posts={data?.posts?.nodes || []} hideButton />
+      <Blog posts={data?.posts?.nodes || []} hideButton />
       <Opinions />
       <Partners />
-      <Contact /> */}
+      <Contact />
     </div>
   );
 }

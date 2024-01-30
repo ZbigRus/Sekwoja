@@ -10,7 +10,7 @@ type Props = {
 export default function Skeleton({ title, content }: Props) {
   return (
     <section
-      className="bg-skeleton min-h-[50vh] bg-[15%_50%] px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-8 flex flex-col justify-center relative gap-8"
+      className="bg-skeleton min-h-[5in] bg-[15%_50%] px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-8 flex flex-col justify-center relative gap-8"
       style={{ backgroundImage: `url('${skeleton.src}')` }}
     >
       <Breadcrumbs

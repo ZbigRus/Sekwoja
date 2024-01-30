@@ -41,7 +41,7 @@ export async function getPosts(limit?: number, exclude?: string) {
             }
         }
     `;
-  const response = await getQuery(query, { next: { revalidate: 3600 } });
+  const response = await getQuery(query);
   return response;
 }
 

@@ -1,6 +1,9 @@
 "use server";
 
-async function getQuery(query: string, options?: RequestInit) {
+export async function getQuery(
+  query: string,
+  options?: RequestInit
+): Promise<QueryResponse> {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}?query=${encodeURIComponent(

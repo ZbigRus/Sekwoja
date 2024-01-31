@@ -4,16 +4,16 @@ export const LINKS: NavLink[] = [
     href: "/o-firmie",
   },
   {
-    title: "Realizacje",
-    href: "/realizacje",
-  },
-  {
     title: "Meble",
     href: "/meble",
   },
   {
     title: "Materiały",
     href: "/materialy",
+  },
+  {
+    title: "Projektowanie",
+    href: "/projektowanie",
   },
   {
     title: "Blog",

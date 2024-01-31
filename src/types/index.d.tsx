@@ -8,7 +8,7 @@ type Category = {
   icon: React.ReactNode;
   link: string;
   hero: Section;
-  desc: Section;
+  desc: Omit<Section, "media">;
 };
 
 type Section = {
@@ -38,4 +38,18 @@ type Post = {
 
 type FeaturedImage = {
   sourceUrl: string;
+};
+
+type QueryResponse = {
+  data: any;
+  error: string;
+};
+
+type Media = {
+  sourceUrl: string;
+  altText: string;
+  srcSet: string;
+  sizes: string;
+  title: string;
+  caption: string;
 };

@@ -6,6 +6,7 @@ import {
   kitchenRightTop,
 } from "@/assets/images/kitchen/kitchen";
 import Link from "next/link";
+import { s1img1, s1img2 } from "@/assets/images/about";
 
 export default function Quality() {
   return (
@@ -37,13 +38,13 @@ export default function Quality() {
           </Button>
         </Link>
       </div>
-      <div className="grid sm:grid-rows-[3rem_2in_2in_1rem] grid-rows-[3rem_1.5in_1.5in_1rem] grid-cols-[1fr_3rem_2fr] gap-4">
+      <div className="grid sm:grid-rows-[3.5in_6rem_4rem] grid-rows-[2.5in_6rem_4rem] grid-cols-[3rem_16rem_1fr] gap-4 w-full relative z-10">
         <div className="relative col-[2/4] row-[1/3] rounded-md overflow-hidden">
           <Image
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
             className="object-cover h-full w-full"
-            src={kitchenRightTop}
+            src={s1img1}
             alt="Kitchen Picture"
           />
         </div>
@@ -52,16 +53,7 @@ export default function Quality() {
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
             className="object-cover h-full w-full"
-            src={kitchenLeftCenter}
-            alt="Kitchen Picture"
-          />
-        </div>
-        <div className="relative col-[3/4] row-[3/5] rounded-md overflow-hidden">
-          <Image
-            fill
-            sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover h-full w-full"
-            src={kitchenRightBottom}
+            src={s1img2}
             alt="Kitchen Picture"
           />
         </div>

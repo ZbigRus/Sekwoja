@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: { type: string } }) {
   return (
     <div>
       <Skeleton {...hero} />
-      <Gallery media={data.mediaItems.nodes || []} />
+      <Gallery media={data.mediaItems.nodes || []} title={props.title} />
       <Desc {...desc} media={data.mediaItems.nodes || []} />
     </div>
   );

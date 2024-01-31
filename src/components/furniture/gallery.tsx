@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Button from "../ui/button";
 import CalendarIcon from "@/assets/icons/calendar";
-import CameraIcon from "@/assets/icons/camera";
+import Slider from "./slider";
 
-export default function Gallery({ media }: { media: Media[] }) {
+export default function Gallery({
+  media,
+  title,
+}: { media: Media[] } & Pick<Section, "title">) {
   return (
     <section className="sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1in]">
       <div className="flex items-center gap-4 justify-between px-[8vw] sm:px-0 mb-4">
@@ -29,7 +32,7 @@ export default function Gallery({ media }: { media: Media[] }) {
             <Image
               className="object-cover sm:rounded"
               fill
-              sizes="50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               src={media[1].sourceUrl}
               alt={media[1].altText}
             />
@@ -38,7 +41,7 @@ export default function Gallery({ media }: { media: Media[] }) {
             <Image
               className="object-cover sm:rounded"
               fill
-              sizes="50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               src={media[2].sourceUrl}
               alt={media[2].altText}
             />
@@ -47,26 +50,12 @@ export default function Gallery({ media }: { media: Media[] }) {
             <Image
               className="object-cover sm:rounded"
               fill
-              sizes="50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               src={media[3].sourceUrl}
               alt={media[3].altText}
             />
           </div>
-          <div
-            className={`relative h-72 lg:h-[20rem] overflow-hidden sm:rounded`}
-          >
-            <Image
-              className="object-cover sm:rounded"
-              fill
-              sizes="50vw"
-              src={media[4].sourceUrl}
-              alt={media[4].altText}
-            />
-            <button className="bg-[#111B16]/65 hover:bg-[#111B16]/85 transition-colors absolute inset-0 flex items-center justify-center w-full text-white text-sm font-medium fill-primary gap-2">
-              <CameraIcon />
-              Przeglądaj wszystkie zdjęcia
-            </button>
-          </div>
+          <Slider media={media} title={title} />
         </div>
       )}
     </section>

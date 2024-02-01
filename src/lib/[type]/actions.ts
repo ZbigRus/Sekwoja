@@ -1,9 +1,9 @@
 import { getQuery } from "../blog/actions";
 
-export async function getImagesByType(type: string): Promise<QueryResponse> {
+export async function getImages(type?: string): Promise<QueryResponse> {
   const query = `
   {
-    mediaItems(where: { title: "${type}"}) {
+    mediaItems${type ? `(where: { title: "${type}"})` : ""} {
       nodes {
         altText
         sourceUrl

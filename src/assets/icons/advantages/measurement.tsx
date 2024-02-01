@@ -7,7 +7,7 @@ export default function MeasurementIcon() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1_607)">
+      <g clipPath="url(#clip0_1_607)">
         <path
           d="M14.4769 77.8142C31.3851 77.8142 42.9962 86.5726 51.1436 86.5726C59.2909 86.5726 76.402 81.8891 76.402 44.4084C76.402 6.92774 53.3827 1.42529 44.4213 1.42529C2.45756 1.42529 -15.4676 77.8142 14.4769 77.8142Z"
           fill="#EFEFEF"

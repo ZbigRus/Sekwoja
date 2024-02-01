@@ -26,36 +26,43 @@ export default function Gallery({
               sizes="100vw"
               src={media[0].sourceUrl}
               alt={media[0].altText}
+              loading="eager"
             />
           </div>
-          <div className={`relative h-72 lg:h-[20rem]`}>
-            <Image
-              className="object-cover sm:rounded"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              src={media[1].sourceUrl}
-              alt={media[1].altText}
-            />
-          </div>
-          <div className={`relative h-72 lg:h-[20rem] col-span-2`}>
-            <Image
-              className="object-cover sm:rounded"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              src={media[2].sourceUrl}
-              alt={media[2].altText}
-            />
-          </div>
-          <div className={`relative h-72 lg:h-[20rem] col-span-2`}>
-            <Image
-              className="object-cover sm:rounded"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              src={media[3].sourceUrl}
-              alt={media[3].altText}
-            />
-          </div>
-          <Slider media={media} title={title} />
+          {media.length > 1 && (
+            <div className={`relative h-72 lg:h-[20rem]`}>
+              <Image
+                className="object-cover sm:rounded"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                src={media[1].sourceUrl}
+                alt={media[1].altText}
+              />
+            </div>
+          )}
+          {media.length > 2 && (
+            <div className={`relative h-72 lg:h-[20rem] col-span-2`}>
+              <Image
+                className="object-cover sm:rounded"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                src={media[2].sourceUrl}
+                alt={media[2].altText}
+              />
+            </div>
+          )}
+          {media.length > 3 && (
+            <div className={`relative h-72 lg:h-[20rem] col-span-2`}>
+              <Image
+                className="object-cover sm:rounded"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                src={media[3].sourceUrl}
+                alt={media[3].altText}
+              />
+            </div>
+          )}
+          {media.length > 4 && <Slider media={media} title={title} />}
         </div>
       )}
     </section>

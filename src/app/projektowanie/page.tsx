@@ -38,10 +38,10 @@ export default async function Page() {
             ]}
           />
         }
-        media={data.mediaItems.nodes || []}
+        media={data.mediaItems.nodes.slice(2) || []}
       />
       {!error && (
-        <Gallery title="Galeria" media={data.mediaItems.nodes || []} />
+        <Gallery title="Galeria" media={data.mediaItems.nodes.slice(2) || []} />
       )}
       <Opinions />
       <Partners />

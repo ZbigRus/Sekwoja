@@ -1,5 +1,6 @@
 import PinIcon from "@/assets/icons/pin";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Vouchers({ media }: { media: Media[] }) {
   return (
@@ -21,9 +22,13 @@ export default function Vouchers({ media }: { media: Media[] }) {
             dangerouslySetInnerHTML={{ __html: media[0].caption }}
             className="text-lg font-medium"
           ></figcaption>
-          <button className="bg-white stroke-[#E2E2E2] px-5 py-2.5 font-medium w-max rounded-md text-sm">
+          <Link
+            className="bg-white stroke-[#E2E2E2] px-5 py-2.5 font-medium w-max rounded-md text-sm"
+            href="/regulaminy-promocji.pdf"
+            download="regulaminy-promocji"
+          >
             Pokaż regulamin
-          </button>
+          </Link>
         </figure>
         <figure className="flex flex-col gap-3">
           <div className="overflow-hidden rounded-md shadow relative !w-full !max-w-full xl:w-max mb-3">

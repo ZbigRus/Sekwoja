@@ -26,7 +26,13 @@ export async function getQuery(
 }
 
 export async function getPosts(limit?: number, exclude?: string) {
-  const filter = limit ? `(first: ${limit})` : "";
+  const filter = limit
+    ? exclude
+      ? `(first: ${limit}, where: { notIn: "${exclude}" })`
+      : `(first: ${limit})`
+    : exclude
+    ? `(where: { notIn: "${exclude}" })`
+    : "";
   const query = `
         {
             posts${filter} {
@@ -44,6 +50,7 @@ export async function getPosts(limit?: number, exclude?: string) {
             }
         }
     `;
+
   const response = await getQuery(query);
   return response;
 }

@@ -11,9 +11,9 @@ export default function Advantages({ media }: { media: Media[] }) {
           <AdvantageRef {...adv} key={adv.title} />
         ))}
       </div>
-      <Slider media={media.slice(0, 2) || []} />
+      <Slider media={media.slice(media.length - 4, media.length - 2) || []} />
       <div className="order-last sm:order-none">
-        <Slider media={media.slice(2, 4) || []} />
+        <Slider media={media.slice(media.length - 2, media.length) || []} />
       </div>
       <div className="col-span-2 flex flex-col gap-4 relative z-10">
         {DESIGN_ADVANTAGES.slice(4, 6).map((adv) => (

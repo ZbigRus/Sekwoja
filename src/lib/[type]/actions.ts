@@ -9,6 +9,7 @@ export async function getImages(type?: string): Promise<QueryResponse> {
         sourceUrl
         srcSet
         sizes
+        caption
       }
     }
   }

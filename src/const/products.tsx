@@ -6,6 +6,16 @@ import LivingRoomIcon from "@/assets/icons/furniture/living-room";
 import OfficeIcon from "@/assets/icons/furniture/office";
 import ShopIcon from "@/assets/icons/furniture/shop";
 import WardrobeIcon from "@/assets/icons/furniture/wardrobe";
+import { skeleton } from "@/assets/images";
+import {
+  bathroom,
+  bedroom,
+  kitchen,
+  room,
+  shop,
+  upholstered,
+  wardrobe,
+} from "@/assets/images/[type]";
 import Content from "@/components/furniture/content";
 
 export const CATEGORIES: Category[] = [
@@ -23,10 +33,10 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [wardrobe.src],
     },
     desc: {
-      title: "Szafy",
+      title: "Kolekcja szaf",
       content: (
         <Content
           paragraphs={[
@@ -35,7 +45,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
   {
@@ -52,7 +61,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [bedroom.src],
     },
     desc: {
       title: "Meble sypialniane",
@@ -64,7 +73,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
   {
@@ -72,7 +80,7 @@ export const CATEGORIES: Category[] = [
     link: "/lozka-tapicerowane",
     icon: <BedIcon />,
     hero: {
-      title: "Przeglądasz kolekcję łóżek tapicerowanych",
+      title: "Przeglądasz kolekcję mebli tapicerowanych",
       content: (
         <Content
           paragraphs={[
@@ -81,7 +89,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [upholstered.src],
     },
     desc: {
       title: "Łóżka tapicerowane",
@@ -93,7 +101,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
   {
@@ -110,7 +117,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [skeleton.src],
     },
     desc: {
       title: "Meble biurowe",
@@ -122,7 +129,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
   {
@@ -139,7 +145,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [kitchen.src],
     },
     desc: {
       title: "Meble kuchenne",
@@ -151,7 +157,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
   {
@@ -168,7 +173,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [bathroom.src],
     },
     desc: {
       title: "Meble łazienkowe",
@@ -180,7 +185,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
   {
@@ -197,7 +201,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [room.src],
     },
     desc: {
       title: "Meble pokojowe",
@@ -209,7 +213,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
   {
@@ -226,7 +229,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
+      media: [shop.src],
     },
     desc: {
       title: "Meble sklepowe",
@@ -238,7 +241,6 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [],
     },
   },
 ];

@@ -1,17 +1,10 @@
-import { skeleton } from "@/assets/images";
 import Breadcrumbs from "./breadcrumbs";
-import { ReactNode } from "react";
 
-type Props = {
-  title: string;
-  content: ReactNode;
-};
-
-export default function Skeleton({ title, content }: Props) {
+export default function Skeleton({ title, content, media }: Section) {
   return (
     <section
       className="bg-skeleton min-h-[5in] bg-[15%_50%] px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-8 flex flex-col justify-center relative gap-8"
-      style={{ backgroundImage: `url('${skeleton.src}')` }}
+      style={{ backgroundImage: `url('${media[0]}')` }}
     >
       <Breadcrumbs
         className="text-white/80 absolute top-8 left-[8vw] md:left-[4vw] 2xl:left-[16vw]"

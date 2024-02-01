@@ -1,8 +1,9 @@
 import TriangleIcon from "@/assets/icons/triangle";
 import Button from "../ui/button";
 import Image from "next/image";
-import { sofaBig, sofaSmall } from "@/assets/images/sofa/sofa";
 import Link from "next/link";
+import { slider1 } from "@/assets/images/hero/hero";
+import { s2img1 } from "@/assets/images/about";
 
 export default function LearnMore() {
   return (
@@ -38,13 +39,13 @@ export default function LearnMore() {
           </Button>
         </Link>
       </div>
-      <div className="grid sm:grid-rows-[3in_4rem_4rem] grid-rows-[1.5in_4rem_4rem] grid-cols-[3rem_9rem_1fr] gap-4 w-full relative z-10">
+      <div className="grid sm:grid-rows-[2.5in_6rem_4rem] grid-rows-[1.5in_6rem_4rem] grid-cols-[3rem_12rem_1fr] gap-4 w-full relative z-10">
         <div className="relative col-[2/4] row-[1/3] rounded-md overflow-hidden">
           <Image
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
             className="object-cover h-full w-full"
-            src={sofaBig}
+            src={s2img1}
             alt="Children room furniture picture"
           />
         </div>
@@ -53,7 +54,7 @@ export default function LearnMore() {
             fill
             sizes="(min-width: 1024px) 40vw, 50vw"
             className="object-cover h-full w-full"
-            src={sofaSmall}
+            src={slider1}
             alt="Children room furniture picture"
           />
         </div>

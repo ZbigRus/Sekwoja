@@ -7,7 +7,7 @@ export default function FiveStarIcon() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1_636)">
+      <g clipPath="url(#clip0_1_636)">
         <path
           d="M15.4769 10.1859C32.3851 10.1859 43.9962 1.42749 52.1436 1.42749C60.2909 1.42749 77.402 6.11105 77.402 43.5917C77.402 81.0724 54.3827 86.5724 45.4213 86.5724C3.45756 86.5748 -14.4676 10.1859 15.4769 10.1859Z"
           fill="#EFEFEF"

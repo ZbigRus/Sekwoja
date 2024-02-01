@@ -43,9 +43,13 @@ export default function Vouchers({ media }: { media: Media[] }) {
             dangerouslySetInnerHTML={{ __html: media[1].caption }}
             className="text-lg font-medium"
           ></figcaption>
-          <button className="bg-white stroke-[#E2E2E2] px-5 py-2.5 font-medium w-max rounded-md text-sm">
+          <Link
+            className="bg-white stroke-[#E2E2E2] px-5 py-2.5 font-medium w-max rounded-md text-sm"
+            href="/regulaminy-promocji.pdf"
+            download="regulaminy-promocji"
+          >
             Pokaż regulamin
-          </button>
+          </Link>
         </figure>
         <div className="absolute w-16 -left-4 -top-4">
           <PinIcon />

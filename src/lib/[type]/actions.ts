@@ -1,10 +1,20 @@
 import { getQuery } from "../blog/actions";
 
-export async function getImages(type?: string): Promise<QueryResponse> {
+export async function getImages(
+  type?: string,
+  exclude?: string[]
+): Promise<QueryResponse> {
   const query = `
   {
-    mediaItems${type ? `(where: { title: "${type}"})` : ""} {
+    mediaItems${
+      type
+        ? `(where: { title: "${type}"})`
+        : exclude?.length
+        ? `(where: { notIn: [${exclude?.map((item) => `"${item}"`)}] })`
+        : ""
+    } {
       nodes {
+        id
         altText
         sourceUrl
         srcSet

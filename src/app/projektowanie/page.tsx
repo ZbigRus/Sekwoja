@@ -11,7 +11,11 @@ import Skeleton from "@/components/ui/skeleton";
 import { getImages } from "@/lib/[type]/actions";
 
 export default async function Page() {
-  const { data, error } = await getImages();
+  const { data: promo } = await getImages("voucher");
+  const { data, error } = await getImages(
+    undefined,
+    promo.mediaItems.nodes?.map((item: any) => item.id) || []
+  );
   return (
     <div>
       <Skeleton
@@ -38,10 +42,10 @@ export default async function Page() {
             ]}
           />
         }
-        media={data.mediaItems.nodes.slice(2) || []}
+        media={data.mediaItems.nodes || []}
       />
       {!error && (
-        <Gallery title="Galeria" media={data.mediaItems.nodes.slice(2) || []} />
+        <Gallery title="Galeria" media={data.mediaItems.nodes || []} />
       )}
       <Opinions />
       <Partners />

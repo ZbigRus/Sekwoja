@@ -88,6 +88,7 @@ export default function Contact({ defaultType }: { defaultType?: string }) {
                 <span className="select-none">Zamawiam rozmowę</span>
               </label>
             </div>
+            <input type="hidden" value="form" name="source" />
             <SubmitButton />
           </form>
         </div>

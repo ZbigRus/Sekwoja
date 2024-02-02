@@ -51,7 +51,7 @@ export async function getPosts(limit?: number, exclude?: string) {
         }
     `;
 
-  const response = await getQuery(query);
+  const response = await getQuery(query, { cache: "no-store" });
   return response;
 }
 

@@ -17,6 +17,7 @@ body {
   max-height: 5in;
   object-position: center;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 #content figure {

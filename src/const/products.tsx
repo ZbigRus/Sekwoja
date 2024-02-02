@@ -21,15 +21,15 @@ import Content from "@/components/furniture/content";
 export const CATEGORIES: Category[] = [
   {
     title: "Szafy",
-    link: "/szafy",
+    link: "/meble/szafy",
     icon: <WardrobeIcon />,
     hero: {
       title: "Przeglądasz kolekcję szaf",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Witamy Cię w fascynującym świecie mebli szafowych, gdzie praktyczność spotyka się z estetyką. W tej kolekcji skupiamy się na dostarczaniu rozwiązań, które nie tylko perfekcyjnie organizują przestrzeń, ale także dodają wyrafinowania Twojemu wnętrzu.",
+            "Przeglądając kolekcję szaf, zanurzysz się w inspirującym świecie, gdzie każdy projekt jest starannie przemyślany, aby sprostać oczekiwaniom zarówno funkcjonalnym, jak i designerskim.",
           ]}
         />
       ),
@@ -40,8 +40,8 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Nasze szafy to wyjątkowe połączenie wysokiej jakości materiałów, solidnej konstrukcji i przemyślanego designu. Bez względu na to, czy preferujesz klasyczne linie czy nowoczesną elegancję, nasza kolekcja oferuje różnorodność, która pozwoli dostosować szafę do Twoich indywidualnych potrzeb.",
+            "Przekonaj się, jak funkcjonalność może iść w parze z designerskim wdziękiem, odkrywając nasze propozycje.",
           ]}
         />
       ),
@@ -49,15 +49,14 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Sypialnie",
-    link: "/sypialnie",
+    link: "/meble/sypialnie",
     icon: <BedroomIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli sypialnianych",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Zapraszamy do fascynującego świata mebli do sypialni, gdzie komfort spotyka się z designerską estetyką. Przekrocz próg naszej kolekcji, aby odkryć nie tylko doskonałe meble do snu, lecz także inspiracje do stworzenia spokojnego azylu w swojej sypialni.",
           ]}
         />
       ),
@@ -68,8 +67,8 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Nasze meble do sypialni to połączenie ergonomicznego designu z najwyższą jakością wykonania. Każdy element został starannie przemyślany, aby nie tylko dostarczać wyjątkowego komfortu snu, ale także dodawać uroku wnętrzu.",
+            "Przejrzyj naszą kolekcję, aby znaleźć meble, które harmonijnie wpiszą się w charakter Twojej sypialni, tworząc miejsce relaksu i spokoju.",
           ]}
         />
       ),
@@ -77,15 +76,14 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Łóżka tapicerowane",
-    link: "/lozka-tapicerowane",
+    link: "/meble/lozka-tapicerowane",
     icon: <BedIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli tapicerowanych",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Przeniknij do luksusowego świata łóżek tapicerowanych, gdzie elegancja spotyka się z wygodą. Odkryj naszą kolekcję, w której każde łóżko jest nie tylko miejscem do snu, ale także ręcznie zaprojektowanym dziełem sztuki, które podkreśli styl Twojej sypialni.",
           ]}
         />
       ),
@@ -96,8 +94,8 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Nasze łóżka tapicerowane to połączenie finezyjnego designu z najwyższej jakości materiałami. Każdy detal został starannie dopracowany, aby dostarczyć nie tylko niezrównanego komfortu snu, ale także wnieść do sypialni szczyptę luksusu.",
+            "Wybierając jedno z naszych łóżek tapicerowanych, inwestujesz nie tylko w zdrowy sen, ale również w wyjątkową estetykę swojej sypialni.",
           ]}
         />
       ),
@@ -105,15 +103,14 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Biurowe",
-    link: "/biurowe",
+    link: "/meble/biurowe",
     icon: <OfficeIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli biurowych",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Witamy w kolekcji mebli biurowych, gdzie funkcjonalność idzie w parze z nowoczesnym stylem. Odkryj innowacyjne rozwiązania, które nie tylko zorganizują Twoją przestrzeń pracy, ale także wniosą do niej wyjątkowy design.",
           ]}
         />
       ),
@@ -124,8 +121,7 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Nasze meble biurowe to więcej niż tylko sprzęt do pracy – to elementy, które podkreślą charakter Twojego biura. Projektujemy z myślą o ergonomiczności, oferując jednocześnie unikalne rozwiązania designerskie. Odkryj, jak nasze meble biurowe mogą zmienić Twoją przestrzeń roboczą w miejsce, gdzie funkcjonalność spotyka się z elegancją, inspirując do efektywnej pracy.",
           ]}
         />
       ),
@@ -133,15 +129,14 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Kuchenne",
-    link: "/kuchenne",
+    link: "/meble/kuchenne",
     icon: <KitchenIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli kuchennych",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Przeniknij do rewolucyjnego świata mebli kuchennych, gdzie praktyczność spotyka się z designerską finezją. Odkryj naszą kolekcję, w której każde mebel nie tylko ułatwia codzienne czynności, ale także wnosi do kuchni niepowtarzalny styl.",
           ]}
         />
       ),
@@ -152,8 +147,8 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Nasze meble kuchenne to harmonia pomiędzy funkcjonalnością a estetyką. Każdy element jest starannie zaprojektowany, aby ułatwić codzienne gotowanie, a jednocześnie nadając kuchni niepowtarzalny charakter.",
+            "Przejrzyj naszą kolekcję, aby znaleźć meble, które nie tylko sprawią, że praca w kuchni stanie się przyjemnością, ale także podkreślą unikalny charakter tego ważnego miejsca w domu.",
           ]}
         />
       ),
@@ -161,15 +156,14 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Łazienkowe",
-    link: "/lazienkowe",
+    link: "/meble/lazienkowe",
     icon: <BathroomIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli łazienkowych",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Zapraszamy do eleganckiego świata mebli łazienkowych, gdzie funkcjonalność łączy się z designerskim wyrafinowaniem. Odkryj naszą kolekcję, w której każdy mebel nie tylko optymalnie wykorzystuje przestrzeń, ale także nadaje łazience wyjątkowy klimat relaksu.",
           ]}
         />
       ),
@@ -180,8 +174,8 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Nasze meble łazienkowe to połączenie nowoczesnego designu, trwałych materiałów i praktycznych rozwiązań. Każdy detal został starannie dobrany, aby dostarczyć nie tylko efektywnego przechowywania, ale także stworzyć atmosferę spokoju w łazience.",
+            "Przejrzyj naszą kolekcję, aby znaleźć meble, które spełnią Twoje oczekiwania zarówno pod względem funkcjonalności, jak i estetyki.",
           ]}
         />
       ),
@@ -189,15 +183,14 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Pokojowe",
-    link: "/pokojowe",
+    link: "/meble/pokojowe",
     icon: <LivingRoomIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli pokojowych",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Przeniknij do świata wyjątkowych mebli pokojowych, gdzie każdy element odzwierciedla Twoją indywidualność. Odkryj naszą kolekcję, w której każdy mebel nie tylko spełnia praktyczne funkcje, ale także stanowi wyjątkową ozdobę Twojej przestrzeni.",
           ]}
         />
       ),
@@ -208,8 +201,8 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Mebel do pokoju to nie tylko element wyposażenia – to manifestacja Twojego stylu życia. Nasze propozycje łączą w sobie funkcjonalność z designerskim podejściem, pozwalając Ci stworzyć przestrzeń, która nie tylko spełni Twoje potrzeby codzienne, ale także odzwierciedli Twoją unikalną tożsamość.",
+            "Przejrzyj naszą kolekcję, aby znaleźć meble, które dodadzą charakteru Twojemu pokojowi.",
           ]}
         />
       ),
@@ -217,15 +210,15 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Sklepowe",
-    link: "/sklepowe",
+    link: "/meble/sklepowe",
     icon: <ShopIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli sklepowych",
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Witamy w świecie profesjonalnych i estetycznych mebli sklepowych, gdzie prezentacja produktów spotyka się z komfortem zakupów.",
+            "Odkryj naszą kolekcję, w której każdy mebel nie tylko wyeksponuje Twoje produkty, ale także stworzy przyjazne i atrakcyjne środowisko handlowe.",
           ]}
         />
       ),
@@ -236,8 +229,8 @@ export const CATEGORIES: Category[] = [
       content: (
         <Content
           paragraphs={[
-            "Lorem ipsum dolor sit amet consectetur. Elit at tincidunt at velit egestas nibh diam. Velit condimentum nunc neque tristique tempus. Quis bibendum magna commodo a bibendum ligula viverra. Nisi vel nec malesuada ultrices.",
-            "Sed sed tellus vitae non lectus at sed diam etiam. Faucibus malesuada a justo velit. Etiam augue lectus ultrices lobortis augue lorem ac eleifend ac. Blandit amet massa dictumst praesent maecenas.",
+            "Nasze meble sklepowe to nie tylko efektywne narzędzia do prezentacji produktów, ale również elementy, które tworzą przyjemną atmosferę handlową. Znajdziesz tutaj różnorodne rozwiązania, dostosowane do specyfiki różnych branż, zapewniające nie tylko funkcjonalność, ale także nowoczesny design.",
+            "Odkryj, jak nasze meble sklepowe mogą wzbogacić wystrój Twojego sklepu, zachęcając klientów do udanych zakupów.",
           ]}
         />
       ),

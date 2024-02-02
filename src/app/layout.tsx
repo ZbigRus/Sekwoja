@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import NextTopLoader from "nextjs-toploader";
+import ChatBot from "@/components/chatbot/chatbot";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <NextTopLoader color="#019843" />
+        <ChatBot />
       </body>
     </html>
   );

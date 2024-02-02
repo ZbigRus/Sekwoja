@@ -6,7 +6,9 @@ import { getImages } from "@/lib/[type]/actions";
 import { redirect } from "next/navigation";
 
 export default async function Page({ params }: { params: { type: string } }) {
-  const props = CATEGORIES.find((item) => item.link === `/${params.type}`);
+  const props = CATEGORIES.find(
+    (item) => item.link === `/meble/${params.type}`
+  );
   if (!props) return redirect("/meble");
   const { hero, desc } = props;
   const { data, error } = await getImages(params.type);

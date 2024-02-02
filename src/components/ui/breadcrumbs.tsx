@@ -1,6 +1,7 @@
 "use client";
 
 import { LINKS } from "@/const/general";
+import { MATERIALS_CATEGORIES } from "@/const/materials";
 import { CATEGORIES } from "@/const/products";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -19,9 +20,9 @@ export default function Breadcrumbs({
   const pagesArr = pathname.split("/").filter((item) => item);
   const [, subpage] = pagesArr;
   const pageTitle = LINKS.find((item) => pathname.startsWith(item.href))?.title;
-  const subpageTitle = CATEGORIES.find((item) =>
-    pathname.endsWith(item.link)
-  )?.title;
+  const subpageTitle =
+    CATEGORIES.find((item) => pathname.endsWith(item.link))?.title ||
+    MATERIALS_CATEGORIES.find((item) => pathname.endsWith(item.link))?.title;
   return (
     <div className={`flex items-center gap-2 text-sm font-medium ${className}`}>
       <Link href="/">Strona główna</Link>

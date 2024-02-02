@@ -10,6 +10,7 @@ export async function sendMail(data: FormData) {
   const phone = data.get("phone")?.toString();
   const message = data.get("message")?.toString();
   const type = data.get("type")?.toString();
+  const source = data.get("source")?.toString();
   const user = process.env.NEXT_PUBLIC_EMAIL_SENDER;
   const recipient = process.env.NEXT_PUBLIC_EMAIL_RECIPIENT;
   const pass = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
@@ -32,12 +33,19 @@ export async function sendMail(data: FormData) {
           to: recipient,
           subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - Sekwoja`,
           text: `
-            Imię: ${firstName}
-            Nazwisko: ${lastName}
-            Numer telefonu: ${phone}
-            Email: ${email}
-            Powód kontaktu: ${type === "measurement" ? "Pomiar" : "Rozmowa"}
-            Message: ${message}
+          Imię: ${firstName}  Nazwisko: ${lastName}
+          
+          Numer telefonu: ${phone}
+          
+          Email: ${email}
+          
+          Powód kontaktu: ${type === "measurement" ? "Pomiar" : "Rozmowa"}
+
+          Źródło kontaktu: ${
+            source === "form" ? "Formularz kontaktowy" : "Chatbot"
+          }
+
+          Message: ${message}
         `,
         },
         (error, info) => {

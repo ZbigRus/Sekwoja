@@ -1,4 +1,5 @@
 import Advantages from "@/components/home/advantages";
+import AGD from "@/components/home/agd";
 import Banner from "@/components/home/banner";
 import Blog from "@/components/home/blog";
 import Contact from "@/components/home/contact/contact";
@@ -23,6 +24,7 @@ export default async function Home() {
       <Products />
       <Banner />
       <Opinions />
+      <AGD />
       <Kitchen />
       <Advantages />
       <Blog posts={posts?.posts?.nodes || []} />

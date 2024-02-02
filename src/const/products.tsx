@@ -21,7 +21,7 @@ import Content from "@/components/furniture/content";
 export const CATEGORIES: Category[] = [
   {
     title: "Szafy",
-    link: "/szafy",
+    link: "/meble/szafy",
     icon: <WardrobeIcon />,
     hero: {
       title: "Przeglądasz kolekcję szaf",
@@ -49,7 +49,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Sypialnie",
-    link: "/sypialnie",
+    link: "/meble/sypialnie",
     icon: <BedroomIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli sypialnianych",
@@ -77,7 +77,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Łóżka tapicerowane",
-    link: "/lozka-tapicerowane",
+    link: "/meble/lozka-tapicerowane",
     icon: <BedIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli tapicerowanych",
@@ -105,7 +105,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Biurowe",
-    link: "/biurowe",
+    link: "/meble/biurowe",
     icon: <OfficeIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli biurowych",
@@ -133,7 +133,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Kuchenne",
-    link: "/kuchenne",
+    link: "/meble/kuchenne",
     icon: <KitchenIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli kuchennych",
@@ -161,7 +161,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Łazienkowe",
-    link: "/lazienkowe",
+    link: "/meble/lazienkowe",
     icon: <BathroomIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli łazienkowych",
@@ -189,7 +189,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Pokojowe",
-    link: "/pokojowe",
+    link: "/meble/pokojowe",
     icon: <LivingRoomIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli pokojowych",
@@ -217,7 +217,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     title: "Sklepowe",
-    link: "/sklepowe",
+    link: "/meble/sklepowe",
     icon: <ShopIcon />,
     hero: {
       title: "Przeglądasz kolekcję mebli sklepowych",

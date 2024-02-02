@@ -3,7 +3,7 @@ import Breadcrumbs from "./breadcrumbs";
 export default function Skeleton({ title, content, media }: Section) {
   return (
     <section
-      className="bg-skeleton min-h-[5in] bg-[15%_50%] px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-8 flex flex-col justify-center relative gap-8"
+      className="min-h-[5in] bg-[15%_50%] px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-8 flex flex-col justify-center relative gap-8"
       style={{ backgroundImage: `url('${media[0]}')` }}
     >
       <Breadcrumbs

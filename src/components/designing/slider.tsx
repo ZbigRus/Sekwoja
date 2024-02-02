@@ -17,6 +17,7 @@ export default function Slider({ media }: { media: Media[] }) {
       timer.current && window.clearTimeout(timer.current);
     };
   }, [index]);
+
   return (
     <div className="overflow-hidden h-[6in] rounded-md flex flex-col items-center relative z-10">
       <div className="h-full w-screen sm:w-[20vw]">

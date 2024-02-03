@@ -82,7 +82,7 @@ export default function ChatBot() {
           <input
             ref={input}
             required
-            className="bg-light placeholder:text-font/80 text-sm py-4 px-6 rounded w-full font-medium"
+            className="bg-light placeholder:text-font/80 text-sm py-4 px-6 rounded w-full font-medium pr-16"
             type={step > 0 ? "email" : "text"}
             readOnly={isPending}
             value={step > 0 ? data.email : data.message}

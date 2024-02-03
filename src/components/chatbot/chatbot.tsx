@@ -35,7 +35,7 @@ export default function ChatBot() {
       </button>
       <div
         className={`bg-white w-[calc(100vw-16vw)] sm:w-auto h-[4in] absolute bottom-[120%] sm:bottom-0 right-0 sm:right-full rounded-xl overflow-hidden flex flex-col ${
-          isActive ? "opacity-100" : "opacity-0"
+          isActive ? "opacity-100" : "opacity-0 pointer-events-none"
         } transition-opacity shadow-[0_25px_48px_0_rgba(17,27,22,0.2)]`}
       >
         <div className="px-6 py-4 grid grid-cols-[44px_1fr] gap-x-4 grid-rows-[1fr_1fr]">

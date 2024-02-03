@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Vouchers({ media }: { media: Media[] }) {
   return (
-    <section className="flex flex-col gap-8 sm:px-[8vw] md:px-[4vw] py-[0.6in] lg:py-[1in] items-center">
+    <section className="flex flex-col gap-8 sm:px-[8vw] md:px-[4vw] py-[0.6in] lg:py-[1in] items-center overflow-hidden">
       <h2 className="text-xl text-center font-medium">
         Unikalne oferty przygotowane dla Ciebie
       </h2>

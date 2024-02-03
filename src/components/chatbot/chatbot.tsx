@@ -4,9 +4,10 @@ import SendIcon from "@/assets/icons/send";
 import { logo } from "@/assets/images";
 import { sendChatMail } from "@/lib/contact/actions";
 import Image from "next/image";
-import { FormEvent, useState, useTransition } from "react";
+import { FormEvent, useRef, useState, useTransition } from "react";
 
 export default function ChatBot() {
+  const input = useRef<HTMLInputElement | null>(null);
   const [isPending, startTransition] = useTransition();
   const [step, setStep] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -28,7 +29,12 @@ export default function ChatBot() {
   return (
     <div className="fixed right-[8vw] md:right-[4vw] bottom-8 z-50">
       <button
-        onClick={() => setIsActive((prev) => !prev)}
+        onClick={() =>
+          setIsActive((prev) => {
+            if (!prev) input.current?.focus();
+            return !prev;
+          })
+        }
         className="w-20 h-20 bg-light rounded-full shadow-[0_4px_24px_4px_rgba(17,27,22,0.15)] grid place-content-center"
       >
         <Image width={64} height={64} src={logo} alt="Sekwoja Logo" />
@@ -74,6 +80,7 @@ export default function ChatBot() {
           className="bg-white p-2 flex items-center relative"
         >
           <input
+            ref={input}
             required
             className="bg-light placeholder:text-font/80 text-sm py-4 px-6 rounded w-full font-medium"
             type={step > 0 ? "email" : "text"}

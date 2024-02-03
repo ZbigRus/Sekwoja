@@ -27,12 +27,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={urbanist.className}>
         <Header />
-        <main className="min-h-[calc(100vh-7rem)] flex flex-col">
+        <main className="min-h-[calc(100vh-7rem)] flex flex-col overflow-hidden">
           {children}
+          <ChatBot />
         </main>
         <Footer />
         <NextTopLoader color="#019843" />
-        <ChatBot />
       </body>
     </html>
   );

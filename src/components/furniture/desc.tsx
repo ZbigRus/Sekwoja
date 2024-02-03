@@ -31,15 +31,17 @@ export default function Desc({ title, content, media }: Props) {
               alt={media[0].altText}
             />
           </div>
-          <div className="relative col-[1/3] row-[2/4] rounded-md overflow-hidden">
-            <Image
-              fill
-              sizes="(min-width: 1024px) 40vw, 50vw"
-              className="object-cover h-full w-full"
-              src={media[1].sourceUrl}
-              alt={media[1].altText}
-            />
-          </div>
+          {media.length > 1 && (
+            <div className="relative col-[1/3] row-[2/4] rounded-md overflow-hidden">
+              <Image
+                fill
+                sizes="(min-width: 1024px) 40vw, 50vw"
+                className="object-cover h-full w-full"
+                src={media[1].sourceUrl}
+                alt={media[1].altText}
+              />
+            </div>
+          )}
         </div>
       )}
     </section>

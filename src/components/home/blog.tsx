@@ -59,6 +59,7 @@ function PostRef({
   date,
   featuredImage,
   suggestion,
+  excerpt,
 }: Post & { suggestion?: boolean }) {
   return (
     <div
@@ -85,10 +86,10 @@ function PostRef({
           </span>
         </div>
         <h3 className="text-xl">{title}</h3>
-        <p className="opacity-80 text-sm mb-2">
-          Lorem ipsum dolor sit amet consectetur. Nam gravida lacinia nisl eu
-          nulla pretium maecenas eget pulvinar.
-        </p>
+        <div
+          className="opacity-80 text-sm mb-2 line-clamp-3"
+          dangerouslySetInnerHTML={{ __html: excerpt }}
+        ></div>
         <Link
           href={`/blog${uri}`}
           className="stroke-secondary flex items-center gap-2 text-sm mt-auto"

@@ -33,6 +33,7 @@ type Post = {
   content: string;
   uri: string;
   date: Date;
+  excerpt: string;
   featuredImage: { node: FeaturedImage };
 };
 

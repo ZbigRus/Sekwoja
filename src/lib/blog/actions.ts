@@ -41,6 +41,7 @@ export async function getPosts(limit?: number, exclude?: string) {
                     content,
                     uri,
                     date,
+                    excerpt,
                     featuredImage {
                       node {
                         sourceUrl

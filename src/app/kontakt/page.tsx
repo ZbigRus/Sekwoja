@@ -12,7 +12,7 @@ export default function Page({
       <div className="px-[8vw] md:px-[4vw] 2xl:px-[16vw] mt-8">
         <Breadcrumbs />
       </div>
-      <Contact defaultType={defaultType} />
+      <Contact defaultType={defaultType} isExpanded />
     </div>
   );
 }

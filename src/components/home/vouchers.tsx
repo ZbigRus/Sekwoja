@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Vouchers({ media }: { media: Media[] }) {
   return (
-    <section className="flex flex-col gap-8 sm:px-[8vw] md:px-[4vw] py-[0.6in] lg:py-[1in] items-center overflow-hidden">
+    <section className="flex flex-col gap-8 sm:px-[8vw] md:px-[4vw] py-[0.6in] lg:py-[1in] items-center">
       <h2 className="text-xl text-center font-medium">
         Unikalne oferty przygotowane dla Ciebie
       </h2>
@@ -26,7 +26,6 @@ export default function Vouchers({ media }: { media: Media[] }) {
             className="bg-white stroke-[#E2E2E2] px-5 py-2.5 font-medium w-max rounded-md text-sm"
             href="/regulaminy-promocji.pdf"
             download="regulaminy-promocji"
-            target="_blank"
           >
             Pokaż regulamin
           </Link>
@@ -48,7 +47,6 @@ export default function Vouchers({ media }: { media: Media[] }) {
             className="bg-white stroke-[#E2E2E2] px-5 py-2.5 font-medium w-max rounded-md text-sm"
             href="/regulaminy-promocji.pdf"
             download="regulaminy-promocji"
-            target="_blank"
           >
             Pokaż regulamin
           </Link>

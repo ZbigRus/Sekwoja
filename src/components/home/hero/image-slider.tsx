@@ -41,6 +41,7 @@ export default function ImageSlider({
             className="object-cover"
             fill
             sizes="(min-width: 768px) 60vw, 100vw"
+            loading="eager"
             src={IMAGES[currentImage]}
             alt="Room photo"
           />

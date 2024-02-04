@@ -2,7 +2,6 @@ import TriangleIcon from "@/assets/icons/triangle";
 import Image from "next/image";
 
 export default function Desc({ title, content, media }: Section) {
-  console.log(media);
   return (
     <section className="px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1.6in] flex flex-col lg:grid grid-cols-2 gap-16 2xl:gap-32 lg:items-center bg-[#F7F3E5]/75 relative">
       <div className="grid grid-rows-[2rem_1in_1.5in_2rem] md:grid-rows-[2rem_1.75in_2.25in_2rem] grid-cols-[1fr_4rem_1fr] gap-x-4 w-full relative z-10 order-last lg:order-first min-h-full">

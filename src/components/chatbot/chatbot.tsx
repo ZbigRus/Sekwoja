@@ -5,6 +5,7 @@ import { logo } from "@/assets/images";
 import { sendChatMail } from "@/lib/contact/actions";
 import Image from "next/image";
 import { FormEvent, useRef, useState, useTransition } from "react";
+import toast from "react-hot-toast";
 
 export default function ChatBot() {
   const input = useRef<HTMLInputElement | null>(null);
@@ -21,7 +22,14 @@ export default function ChatBot() {
     if (step === 0) return setStep((prev) => prev + 1);
     startTransition(async () => {
       const { email, message } = data;
-      await sendChatMail({ message, email });
+      const isOk = await sendChatMail({ message, email });
+      if (isOk) {
+        toast.success(
+          "Twoja wiadomość została przesłana! Dziękujemy za kontakt"
+        );
+      } else {
+        toast.error("Wystąpił błąd. Spróbuj ponownie później.");
+      }
       setIsActive(false);
     });
   };

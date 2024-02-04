@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     remotePatterns: [{ hostname: "spurious-passivatio.000webhostapp.com" }],
+    unoptimized: true,
   },
 };
 

@@ -27,7 +27,7 @@ export async function sendMail(data: FormData) {
   const type = data.get("type")?.toString();
 
   try {
-    await new Promise((resolve, reject) => {
+    const info = await new Promise((resolve, reject) => {
       transporter.sendMail(
         {
           from: user,
@@ -44,20 +44,20 @@ export async function sendMail(data: FormData) {
 
           Źródło kontaktu: Formularz kontaktowy
 
-          Message: ${message}
+          Wiadomość: 
+          ${message}
         `,
         },
-        (error, info) => {
+        (error) => {
           if (error) {
-            console.log({ error });
-            reject(error);
+            reject(false);
           } else {
-            resolve(info);
+            resolve(true);
           }
         }
       );
     });
-    await new Promise((resolve, reject) => {
+    const thanks = await new Promise((resolve, reject) => {
       transporter.sendMail(
         {
           from: user,
@@ -72,18 +72,21 @@ export async function sendMail(data: FormData) {
           Sekwoja
         `,
         },
-        (error, info) => {
+        (error) => {
           if (error) {
             console.log({ error });
-            reject(error);
+            reject(false);
           } else {
-            resolve(info);
+            resolve(true);
           }
         }
       );
     });
+    if (info && thanks) return true;
+    return false;
   } catch (err) {
     console.log({ err });
+    return false;
   }
 }
 
@@ -94,53 +97,63 @@ export async function sendChatMail({
   message: string;
   email: string;
 }) {
-  await new Promise((resolve, reject) => {
-    transporter.sendMail(
-      {
-        from: user,
-        to: recipient,
-        subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - Sekwoja`,
-        text: `
-        Email: ${email}
-
-        Źródło kontaktu: Chatbot
-        
-        Message: ${message}
-      `,
-      },
-      (error, info) => {
-        if (error) {
-          console.log({ error });
-          reject(error);
-        } else {
-          resolve(info);
+  try {
+    const info = await new Promise((resolve, reject) => {
+      transporter.sendMail(
+        {
+          from: user,
+          to: recipient,
+          subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - Sekwoja`,
+          text: `
+          Email: ${email}
+  
+          Źródło kontaktu: Chatbot
+          
+          Wiadomość: 
+          ${message}
+        `,
+        },
+        (error) => {
+          if (error) {
+            console.log({ error });
+            reject(false);
+          } else {
+            resolve(true);
+          }
         }
-      }
-    );
-  });
-  await new Promise((resolve, reject) => {
-    transporter.sendMail(
-      {
-        from: user,
-        to: email,
-        subject: `Dziękujemy za wysłanie zgłoszenia!`,
-        text: `
-        Dziękujemy serdecznie za skorzystanie z naszego formularza kontaktowego i przesłanie nam Państwa informacji. Cieszymy się, że zdecydowali się Państwo skontaktować z naszym zespołem.
-
-        Zgłoszenie zostało odebrane i jest obecnie przetwarzane przez pracowników naszej firmy. W niedługim czasie skontaktujemy się z Państwem, aby omówić zapytanie, odpowiedzieć na ewentualne pytania oraz udzielić niezbędnych informacji.
-        
-        Z poważaniem,
-        Sekwoja
-      `,
-      },
-      (error, info) => {
-        if (error) {
-          console.log({ error });
-          reject(error);
-        } else {
-          resolve(info);
+      );
+    });
+    const thanks = await new Promise((resolve, reject) => {
+      transporter.sendMail(
+        {
+          from: user,
+          to: email,
+          subject: `Dziękujemy za wysłanie zgłoszenia!`,
+          text: `
+          Dziękujemy serdecznie za skorzystanie z naszego formularza kontaktowego i przesłanie nam Państwa informacji. Cieszymy się, że zdecydowali się Państwo skontaktować z naszym zespołem.
+  
+          Zgłoszenie zostało odebrane i jest obecnie przetwarzane przez pracowników naszej firmy. W niedługim czasie skontaktujemy się z Państwem, aby omówić zapytanie, odpowiedzieć na ewentualne pytania oraz udzielić niezbędnych informacji.
+  
+          Twoja wiadomość: 
+          ${message}
+          
+          Z poważaniem,
+          Sekwoja
+        `,
+        },
+        (error) => {
+          if (error) {
+            console.log({ error });
+            reject(false);
+          } else {
+            resolve(true);
+          }
         }
-      }
-    );
-  });
+      );
+    });
+    if (info && thanks) return true;
+    return false;
+  } catch (err) {
+    return false;
+  }
 }

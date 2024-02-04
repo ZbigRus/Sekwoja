@@ -17,11 +17,11 @@ export default function Input({
         </label>
       )}
       <input
-        {...props}
         className="rounded-md border-[1px] border-[#E2E2E2] px-4 py-3 !outline-none text-sm w-full"
         id={name}
         name={name}
         type="text"
+        {...props}
       />
     </div>
   );

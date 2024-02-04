@@ -52,7 +52,7 @@ export async function getPosts(limit?: number, exclude?: string) {
         }
     `;
 
-  const response = await getQuery(query);
+  const response = await getQuery(query, { next: { revalidate: 3600 } });
   return response;
 }
 

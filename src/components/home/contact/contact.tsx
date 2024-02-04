@@ -1,13 +1,10 @@
 import ContactPhoneIcon from "@/assets/icons/contact-phone";
 import LocationIcon from "@/assets/icons/location";
 import MailIcon from "@/assets/icons/mail";
-import Input from "../../ui/input";
 import Image from "next/image";
 import { contactWoman } from "@/assets/images";
-import SubmitButton from "./submit-button";
-import { sendMail } from "@/lib/contact/actions";
 import ClockIcon from "@/assets/icons/clock";
-import PhoneIcon from "@/assets/icons/phone";
+import Form from "./form";
 
 export default function Contact({
   defaultType,
@@ -53,58 +50,7 @@ export default function Contact({
           <h3 className="text-[22px] mb-4 font-medium">
             Wypełnij formularz, odezwiemy się!
           </h3>
-          <form
-            className="flex flex-col gap-x-4 gap-y-6 sm:grid grid-cols-2 w-full"
-            action={sendMail}
-          >
-            <Input required name="first-name" label="Imię" />
-            <Input required name="last-name" label="Nazwisko" />
-            <Input required name="email" label="Email" />
-            <Input required name="phone" label="Telefon" />
-            <div className="relative col-span-2">
-              <label
-                className="text-[#BABABA] text-[12px] absolute left-3.5 top-0 -translate-y-[50%] bg-white px-1"
-                htmlFor="message"
-              >
-                Wiadomość (opcjonalnie)
-              </label>
-              <textarea
-                className="rounded-md border-[1px] border-[#E2E2E2] px-4 py-3 !outline-none text-sm w-full"
-                id="message"
-                name="message"
-                required
-              />
-            </div>
-            <div className="col-span-2 flex items-center gap-4">
-              <label
-                className="text-sm flex items-center gap-2"
-                htmlFor="measurement"
-              >
-                <input
-                  type="radio"
-                  name="type"
-                  value="measurement"
-                  id="measurement"
-                  defaultChecked={defaultType !== "call"}
-                  required
-                />
-                <span className="select-none">Zamawiam pomiar</span>
-              </label>
-              <label className="text-sm flex items-center gap-2" htmlFor="call">
-                <input
-                  type="radio"
-                  name="type"
-                  value="call"
-                  id="call"
-                  defaultChecked={defaultType === "call"}
-                  required
-                />
-                <span className="select-none">Zamawiam rozmowę</span>
-              </label>
-            </div>
-            <input type="hidden" value="form" name="source" />
-            <SubmitButton />
-          </form>
+          <Form defaultType={defaultType} />
         </div>
         <div className="absolute left-0 right-0 xl:w-full bg-[#F7F3E5] rounded-l-xl h-[3.4in] flex justify-end items-end w-screen xl:pr-12 -z-10">
           <Image

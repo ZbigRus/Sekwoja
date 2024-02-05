@@ -5,19 +5,17 @@ export async function getQuery(
   options?: RequestInit
 ): Promise<QueryResponse> {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}?query=${encodeURIComponent(
-        query
-      )}`,
-      options
-    );
+    const url = `${
+      process.env.NEXT_PUBLIC_WORDPRESS_API_URL
+    }?query=${encodeURIComponent(query)}`;
+    const response = await fetch(url, options);
     const json = await response.json();
     return {
       data: json.data,
       error: json.errors?.length > 0 ? json.errors[0].message : null,
     };
   } catch (err) {
-    console.log(err);
+    console.log({ err });
     return {
       error: "Error",
       data: null,
@@ -34,23 +32,23 @@ export async function getPosts(limit?: number, exclude?: string) {
     ? `(where: { notIn: "${exclude}" })`
     : "";
   const query = `
-        {
-            posts${filter} {
-                nodes {
-                    title,
-                    content,
-                    uri,
-                    date,
-                    excerpt,
-                    featuredImage {
-                      node {
-                        sourceUrl
-                      }
-                    }
+  {
+      posts${filter} {
+          nodes {
+              title,
+              content,
+              uri,
+              date,
+              excerpt,
+              featuredImage {
+                node {
+                  sourceUrl
                 }
-            }
-        }
-    `;
+              }
+          }
+      }
+  }
+  `;
 
   const response = await getQuery(query, { next: { revalidate: 3600 } });
   return response;

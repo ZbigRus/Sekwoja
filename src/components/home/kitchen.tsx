@@ -5,6 +5,7 @@ import {
   kitchenRightBottom,
   kitchenRightTop,
 } from "@/assets/images/kitchen/kitchen";
+import Link from "next/link";
 
 export default function Kitchen() {
   return (
@@ -29,9 +30,11 @@ export default function Kitchen() {
           funkcjonalności. Wybierając nasze meble, inwestujesz w jakość i
           trwałość, które przetrwają przez lata.
         </p>
-        <Button className="mt-4 w-max" variant="secondary">
-          Pokaż więcej zdjęć
-        </Button>
+        <Link href="/meble/kuchenne">
+          <Button asChild className="mt-4 w-max" variant="secondary">
+            Pokaż więcej zdjęć
+          </Button>
+        </Link>
       </div>
       <div className="grid sm:grid-rows-[3rem_2in_2in_1rem] grid-rows-[3rem_1.5in_1.5in_1rem] grid-cols-[1fr_3rem_2fr] gap-4">
         <div className="relative col-[2/4] row-[1/3] rounded-md overflow-hidden">

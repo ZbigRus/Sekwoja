@@ -9,6 +9,18 @@ import Opinions from "@/components/home/opinions";
 import Partners from "@/components/home/partners";
 import Skeleton from "@/components/ui/skeleton";
 import { getImages } from "@/lib/[type]/actions";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projektowanie | Sekwoja - Meble na wymiar",
+  description:
+    "Przy projektowaniu mającej powstać dla Państwa zabudowy korzystamy z najnowszych narzędzi programistycznych, umożliwiających wierną wizualizacją i aranżację tworzonych mebli. Obecnie wykorzystujemy narzędzia takie jest program CAD Kuchnie firmy CAD Projekt oraz PRO100.",
+  openGraph: {
+    title: "Projektowanie | Sekwoja - Meble na wymiar",
+    description:
+      "Przy projektowaniu mającej powstać dla Państwa zabudowy korzystamy z najnowszych narzędzi programistycznych, umożliwiających wierną wizualizacją i aranżację tworzonych mebli. Obecnie wykorzystujemy narzędzia takie jest program CAD Kuchnie firmy CAD Projekt oraz PRO100.",
+  },
+};
 
 export default async function Page() {
   const { data: promo } = await getImages("voucher");

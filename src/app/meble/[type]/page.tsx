@@ -3,9 +3,26 @@ import Gallery from "@/components/furniture/gallery";
 import Skeleton from "@/components/ui/skeleton";
 import { CATEGORIES } from "@/const/products";
 import { getImages } from "@/lib/[type]/actions";
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
-export default async function Page({ params }: { params: { type: string } }) {
+type Props = { params: { type: string } };
+
+export function generateMetadata({ params }: Props): Metadata {
+  const props = CATEGORIES.find(
+    (item) => item.link === `/meble/${params.type}`
+  );
+  if (!props) return {};
+  return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ""),
+    title: `${props.title} | Sekwoja - Meble na wymiar`,
+    openGraph: {
+      title: `${props.title} | Sekwoja - Meble na wymiar`,
+    },
+  };
+}
+
+export default async function Page({ params }: Props) {
   const props = CATEGORIES.find(
     (item) => item.link === `/meble/${params.type}`
   );

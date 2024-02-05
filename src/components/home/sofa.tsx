@@ -2,6 +2,7 @@ import TriangleIcon from "@/assets/icons/triangle";
 import Button from "../ui/button";
 import Image from "next/image";
 import { sofaBig, sofaSmall } from "@/assets/images/sofa/sofa";
+import Link from "next/link";
 
 export default function Sofa() {
   return (
@@ -29,9 +30,11 @@ export default function Sofa() {
           jednym. Odkryj, jak nasza kolekcja wbudowanych mebli pokojowych może
           urozmaicić i ulepszyć Twoją przestrzeń.
         </p>
-        <Button className="mt-4 w-max" variant="secondary">
-          Pokaż więcej zdjęć
-        </Button>
+        <Link href="/meble/pokojowe">
+          <Button asChild className="mt-4 w-max" variant="secondary">
+            Pokaż więcej zdjęć
+          </Button>
+        </Link>
       </div>
       <div className="grid sm:grid-rows-[3in_4rem_4rem] grid-rows-[1.5in_4rem_4rem] grid-cols-[3rem_9rem_1fr] gap-4 w-full relative z-10">
         <div className="relative col-[2/4] row-[1/3] rounded-md overflow-hidden">

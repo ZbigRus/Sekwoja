@@ -7,6 +7,18 @@ import Banner from "@/components/home/banner";
 import Contact from "@/components/home/contact/contact";
 import Opinions from "@/components/home/opinions";
 import Skeleton from "@/components/ui/skeleton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "O firmie | Sekwoja - Meble na wymiar",
+  description:
+    "Firma „SEKWOJA” istnieje od 1994r. i specjalizuje się w wykonywaniu mebli na indywidualne zamówienia klientów. Od samego początku dynamicznie wkroczyliśmy na rynek i wciąż aktywnie na nim działamy.",
+  openGraph: {
+    title: "O firmie | Sekwoja - Meble na wymiar",
+    description:
+      "Firma „SEKWOJA” istnieje od 1994r. i specjalizuje się w wykonywaniu mebli na indywidualne zamówienia klientów. Od samego początku dynamicznie wkroczyliśmy na rynek i wciąż aktywnie na nim działamy.",
+  },
+};
 
 export default function Page() {
   return (

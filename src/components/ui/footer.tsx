@@ -1,11 +1,11 @@
 import { LINKS } from "@/const/general";
 import NavLink from "./nav-link";
-import ArrowRightIcon from "@/assets/icons/arrow-right";
 import Image from "next/image";
 import { logo } from "@/assets/images";
 import Link from "next/link";
 import FacebookIcon from "@/assets/icons/fb";
 import InstagramIcon from "@/assets/icons/ig";
+import ScrollButton from "./scroll-button";
 
 export default function Footer() {
   return (
@@ -31,12 +31,7 @@ export default function Footer() {
         >
           <FacebookIcon />
         </Link>
-        <button className="transition-colors w-max rounded-md px-5 h-11 flex items-center gap-2 text-sm group border-[#464646] border-[1px] hover:border-white hover:bg-white hover:text-background-dark text-white">
-          Do góry
-          <div className="-rotate-90 stroke-white group-hover:stroke-black transition-colors">
-            <ArrowRightIcon />
-          </div>
-        </button>
+        <ScrollButton />
       </div>
     </footer>
   );

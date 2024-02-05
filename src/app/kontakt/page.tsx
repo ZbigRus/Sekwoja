@@ -1,5 +1,13 @@
 import Contact from "@/components/home/contact/contact";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontakt | Sekwoja - Meble na wymiar",
+  openGraph: {
+    title: "Kontakt | Sekwoja - Meble na wymiar",
+  },
+};
 
 export default function Page({
   searchParams,

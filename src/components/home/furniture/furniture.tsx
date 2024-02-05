@@ -1,6 +1,7 @@
 import { brushPattern } from "@/assets/images";
 import Button from "../../ui/button";
 import ImageSlider from "./image-slider";
+import Link from "next/link";
 
 export default function Furniture() {
   return (
@@ -35,9 +36,11 @@ export default function Furniture() {
               Zaaranżujmy razem przestrzeń, która odzwierciedli Twój unikalny
               styl i potrzeby.
             </p>
-            <Button className="mt-4 w-max" variant="secondary">
-              Pokaż więcej zdjęć
-            </Button>
+            <Link href="/projektowanie">
+              <Button asChild className="mt-4 w-max" variant="secondary">
+                Dowiedz się więcej
+              </Button>
+            </Link>
           </div>
         </div>
       </ImageSlider>

@@ -12,6 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data, error } = await getSinglePost(params.slug);
   if (error) return {};
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ""),
     title: `${data.post.title} | Sekwoja - Meble na wymiar`,
     openGraph: {
       title: `${data.post.title} | Sekwoja - Meble na wymiar`,

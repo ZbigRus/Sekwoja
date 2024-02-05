@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [{ hostname: "spurious-passivatio.000webhostapp.com" }],
+    remotePatterns: [{ hostname: "api.sekwoja.com" }],
     unoptimized: true,
   },
 };

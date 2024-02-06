@@ -43,6 +43,7 @@ export default function ImageSlider({
             sizes="(min-width: 768px) 60vw, 100vw"
             loading="eager"
             src={IMAGES[currentImage]}
+            priority
             alt="Room photo"
           />
         </div>

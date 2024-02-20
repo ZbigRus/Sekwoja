@@ -2,9 +2,9 @@
 
 import nodemailer from "nodemailer";
 
-const user = process.env.NEXT_PUBLIC_EMAIL_SENDER;
-const recipient = process.env.NEXT_PUBLIC_EMAIL_RECIPIENT;
-const pass = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
+const user = process.env.EMAIL_SENDER;
+const recipient = process.env.EMAIL_RECIPIENT;
+const pass = process.env.EMAIL_PASSWORD;
 const transporter = nodemailer.createTransport({
   host: "mail.sekwoja.com",
   port: 465,

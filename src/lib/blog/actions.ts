@@ -5,9 +5,9 @@ export async function getQuery(
   options?: RequestInit
 ): Promise<QueryResponse> {
   try {
-    const url = `${
-      process.env.NEXT_PUBLIC_WORDPRESS_API_URL
-    }?query=${encodeURIComponent(query)}`;
+    const url = `${process.env.WORDPRESS_API_URL}?query=${encodeURIComponent(
+      query
+    )}`;
     const response = await fetch(url, options);
     const json = await response.json();
     return {

@@ -34,18 +34,19 @@ export async function sendMail(data: FormData) {
           to: recipient,
           subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - Sekwoja`,
           text: `
-          Imię: ${firstName}  Nazwisko: ${lastName}
-          
-          Numer telefonu: ${phone}
-          
-          Email: ${email}
-          
-          Powód kontaktu: ${type === "measurement" ? "Pomiar" : "Rozmowa"}
+Imię: ${firstName}  
+Nazwisko: ${lastName}
 
-          Źródło kontaktu: Formularz kontaktowy
+Numer telefonu: ${phone}
 
-          Wiadomość: 
-          ${message}
+Email: ${email}
+
+Powód kontaktu: ${type === "measurement" ? "Pomiar" : "Rozmowa"}
+
+Źródło kontaktu: Formularz kontaktowy
+
+Wiadomość: 
+${message}
         `,
         },
         (error) => {
@@ -64,12 +65,15 @@ export async function sendMail(data: FormData) {
           to: email,
           subject: `Dziękujemy za wysłanie zgłoszenia!`,
           text: `
-          Dziękujemy serdecznie za skorzystanie z naszego formularza kontaktowego i przesłanie nam Państwa informacji. Cieszymy się, że zdecydowali się Państwo skontaktować z naszym zespołem.
+Dziękujemy serdecznie za skorzystanie z naszego formularza kontaktowego i przesłanie nam Państwa informacji. Cieszymy się, że zdecydowali się Państwo skontaktować z naszym zespołem.
 
-          Zgłoszenie zostało odebrane i jest obecnie przetwarzane przez pracowników naszej firmy. W niedługim czasie skontaktujemy się z Państwem, aby omówić zapytanie, odpowiedzieć na ewentualne pytania oraz udzielić niezbędnych informacji.
-          
-          Z poważaniem,
-          Sekwoja
+Zgłoszenie zostało odebrane i jest obecnie przetwarzane przez pracowników naszej firmy. W niedługim czasie skontaktujemy się z Państwem, aby omówić zapytanie, odpowiedzieć na ewentualne pytania oraz udzielić niezbędnych informacji.
+
+Twoja wiadomość: 
+${message}
+
+Z poważaniem,
+Sekwoja
         `,
         },
         (error) => {
@@ -130,15 +134,15 @@ export async function sendChatMail({
           to: email,
           subject: `Dziękujemy za wysłanie zgłoszenia!`,
           text: `
-          Dziękujemy serdecznie za skorzystanie z naszego formularza kontaktowego i przesłanie nam Państwa informacji. Cieszymy się, że zdecydowali się Państwo skontaktować z naszym zespołem.
-  
-          Zgłoszenie zostało odebrane i jest obecnie przetwarzane przez pracowników naszej firmy. W niedługim czasie skontaktujemy się z Państwem, aby omówić zapytanie, odpowiedzieć na ewentualne pytania oraz udzielić niezbędnych informacji.
-  
-          Twoja wiadomość: 
-          ${message}
-          
-          Z poważaniem,
-          Sekwoja
+Dziękujemy serdecznie za skorzystanie z naszego formularza kontaktowego i przesłanie nam Państwa informacji. Cieszymy się, że zdecydowali się Państwo skontaktować z naszym zespołem.
+
+Zgłoszenie zostało odebrane i jest obecnie przetwarzane przez pracowników naszej firmy. W niedługim czasie skontaktujemy się z Państwem, aby omówić zapytanie, odpowiedzieć na ewentualne pytania oraz udzielić niezbędnych informacji.
+
+Twoja wiadomość: 
+${message}
+
+Z poważaniem,
+Sekwoja
         `,
         },
         (error) => {

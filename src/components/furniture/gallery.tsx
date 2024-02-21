@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "../ui/button";
 import CalendarIcon from "@/assets/icons/calendar";
 import Slider from "./slider";
+import Link from "next/link";
 
 export default function Gallery({
   media,
@@ -13,9 +14,11 @@ export default function Gallery({
         <h2 className="font-medium text-2xl xl:text-3xl mb-4 select-none after:block after:h-[3px] after:bg-secondary after:w-full after:max-w-[60%] after:ml-auto after:mr-[5%]">
           Nasze realizacje
         </h2>
-        <Button className="fill-secondary mb-2 hidden sm:flex">
-          <CalendarIcon /> Zamów pomiar
-        </Button>
+        <Link href="/kontakt">
+          <Button className="fill-secondary mb-2 hidden sm:flex">
+            <CalendarIcon /> Zamów pomiar
+          </Button>
+        </Link>
       </div>
       {media.length > 0 && (
         <div className="flex flex-col lg:grid grid-cols-[3fr_1fr_3fr] gap-4">

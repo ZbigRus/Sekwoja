@@ -120,7 +120,7 @@ export default function PinIcon() {
         >
           <stop stop-opacity="0.99107" />
           <stop offset="0.51389" stop-opacity="0.61607" />
-          <stop offset="1" stop-color="#8D8D8D" stop-opacity="0" />
+          <stop offset="1" stopColor="#8D8D8D" stop-opacity="0" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_3423_5496"
@@ -130,8 +130,8 @@ export default function PinIcon() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.8124 26.0144) rotate(180) scale(17.6207 17.6029)"
         >
-          <stop stop-color="#019843" />
-          <stop offset="1" stop-color="#157941" />
+          <stop stopColor="#019843" />
+          <stop offset="1" stopColor="#157941" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_3423_5496"
@@ -143,7 +143,7 @@ export default function PinIcon() {
         >
           <stop stop-opacity="0.99107" />
           <stop offset="0.51389" stop-opacity="0.61607" />
-          <stop offset="1" stop-color="#8D8D8D" stop-opacity="0" />
+          <stop offset="1" stopColor="#8D8D8D" stop-opacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_3423_5496"
@@ -153,8 +153,8 @@ export default function PinIcon() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(20.7535 22.431) rotate(180) scale(10.8709 10.8601)"
         >
-          <stop stop-color="#00632C" stop-opacity="0.5" />
-          <stop offset="0.66667" stop-color="#074D26" stop-opacity="0.51" />
+          <stop stopColor="#00632C" stop-opacity="0.5" />
+          <stop offset="0.66667" stopColor="#074D26" stop-opacity="0.51" />
           <stop offset="1" stop-opacity="0" />
         </radialGradient>
         <radialGradient
@@ -165,8 +165,8 @@ export default function PinIcon() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(36.4233 33.4088) rotate(32.9228) scale(2.10358 8.42039)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stop-opacity="0" />
         </radialGradient>
         <radialGradient
           id="paint5_radial_3423_5496"
@@ -176,10 +176,10 @@ export default function PinIcon() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(11.1801 11.0195) rotate(134.852) scale(13.1978 12.7338)"
         >
-          <stop stop-color="#0B8A43" />
-          <stop offset="0.48052" stop-color="#0D8742" />
-          <stop offset="0.73611" stop-color="#098C42" />
-          <stop offset="1" stop-color="#45381C" />
+          <stop stopColor="#0B8A43" />
+          <stop offset="0.48052" stopColor="#0D8742" />
+          <stop offset="0.73611" stopColor="#098C42" />
+          <stop offset="1" stopColor="#45381C" />
         </radialGradient>
         <radialGradient
           id="paint6_radial_3423_5496"
@@ -189,8 +189,8 @@ export default function PinIcon() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(3.39555 6.773) rotate(-148.478) scale(2.94643 12.0448)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stop-opacity="0" />
         </radialGradient>
       </defs>
     </svg>

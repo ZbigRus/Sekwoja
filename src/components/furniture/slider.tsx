@@ -1,9 +1,10 @@
 "use client";
 
+import ArrowRightIcon from "@/assets/icons/arrow-right";
 import CameraIcon from "@/assets/icons/camera";
 import XIcon from "@/assets/icons/x";
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import { Fragment, useLayoutEffect, useState } from "react";
 
 export default function Slider({
   title,
@@ -11,6 +12,11 @@ export default function Slider({
 }: { media: Media[] } & Pick<Section, "title">) {
   const [isActive, setIsActive] = useState(false);
   const [index, setIndex] = useState(0);
+
+  useLayoutEffect(() => {
+    setIndex(0);
+  }, [isActive]);
+
   return (
     <Fragment>
       <div className={`relative h-72 lg:h-[20rem] overflow-hidden sm:rounded`}>
@@ -50,12 +56,12 @@ export default function Slider({
               {title}
             </h2>
           </div>
-          <div className="w-screen px-[8vw] sm:px-[16vw]">
+          <div className="w-screen sm:px-[16vw] relative flex items-center">
             <div
               style={{
                 transform: `translateX(calc(${index} * 68vw * -1 - ${index} * 16px))`,
               }}
-              className="flex items-center w-max gap-4 transition-transform"
+              className="items-center w-max gap-4 transition-transform sm:flex hidden"
             >
               {media.map((item, i) => (
                 <ImageRef
@@ -66,6 +72,39 @@ export default function Slider({
                 />
               ))}
             </div>
+            <div
+              style={{
+                transform: `translateX(calc(${index} * 100vw * -1 - ${index} * 16px))`,
+              }}
+              className="flex items-center w-max gap-4 transition-transform sm:hidden"
+            >
+              {media.map((item, i) => (
+                <ImageRef
+                  {...item}
+                  handleChange={() => setIndex(i)}
+                  isActive={index === i}
+                  key={`media:${i}`}
+                />
+              ))}
+            </div>
+            {index > 0 && (
+              <button
+                onClick={() => setIndex((prev) => prev - 1)}
+                className="rounded-full bg-white shadow stroke-font absolute left-4 h-12 w-12 flex items-center justify-center sm:hidden"
+              >
+                <div className="-rotate-180">
+                  <ArrowRightIcon />
+                </div>
+              </button>
+            )}
+            {index < media.length - 1 && (
+              <button
+                onClick={() => setIndex((prev) => prev + 1)}
+                className="rounded-full bg-white shadow stroke-font absolute right-8 h-12 w-12 flex items-center justify-center sm:hidden"
+              >
+                <ArrowRightIcon />
+              </button>
+            )}
           </div>
         </div>
         <div className="absolute inset-0 w-full h-full bg-[#1C1C1C]/95"></div>
@@ -82,7 +121,7 @@ const ImageRef = ({
 }: Media & { isActive: boolean; handleChange: () => void }) => (
   <button
     onClick={handleChange}
-    className={`relative h-[40vh] sm:h-[65vh]  w-[68vw] transition-transform ${
+    className={`relative h-[45vh] sm:h-[65vh] w-screen sm:w-[68vw] transition-transform ${
       isActive ? "scale-100" : "scale-90"
     }`}
   >

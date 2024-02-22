@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: "api.sekwoja.com",
-        protocol: "http",
+        protocol: "https",
         pathname: "/wp-content/**",
       },
     ],

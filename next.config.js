@@ -8,7 +8,6 @@ const nextConfig = {
         pathname: "/wp-content/**",
       },
     ],
-    unoptimized: true,
   },
 };
 

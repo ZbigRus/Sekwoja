@@ -8,9 +8,11 @@ export async function getImages(
   {
     mediaItems${
       type
-        ? `(where: { title: "${type}"})`
+        ? `(where: { title: "${type}"}, first: 100)`
         : exclude?.length
-        ? `(where: { notIn: [${exclude?.map((item) => `"${item}"`)}] })`
+        ? `(where: { notIn: [${exclude?.map(
+            (item) => `"${item}"`
+          )}] }, first: 100)`
         : ""
     } {
       nodes {

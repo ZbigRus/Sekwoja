@@ -7,11 +7,22 @@ import {
   slider4,
   slider6,
   slider7,
+  slider8,
+  slider9,
 } from "@/assets/images/hero/hero";
 import Image from "next/image";
 import { Fragment, useEffect, useRef, useState } from "react";
 
-const IMAGES = [slider1, slider2, slider3, slider4, slider6, slider7];
+const IMAGES = [
+  slider1,
+  slider2,
+  slider3,
+  slider4,
+  slider6,
+  slider7,
+  slider8,
+  slider9,
+];
 
 export default function ImageSlider({
   children,

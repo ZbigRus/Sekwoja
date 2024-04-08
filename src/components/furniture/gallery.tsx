@@ -9,7 +9,10 @@ export default function Gallery({
   title,
 }: { media: Media[] } & Pick<Section, "title">) {
   return (
-    <section className="sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1in]">
+    <section
+      id="gallery"
+      className="sm:px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1in]"
+    >
       <div className="flex items-center gap-4 justify-between px-[8vw] sm:px-0 mb-4">
         <h2 className="font-medium text-2xl xl:text-3xl mb-4 select-none after:block after:h-[3px] after:bg-secondary after:w-full after:max-w-[60%] after:ml-auto after:mr-[5%]">
           Nasze realizacje

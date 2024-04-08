@@ -33,7 +33,7 @@ export default function LearnMore() {
           Zapraszamy wszystkich Państwa do odwiedzenia siedziby naszej firmy i
           do zapoznania się z pełnym wachlarzem oferowanych usług.
         </p>
-        <Link href="/realizacje">
+        <Link href="/projektowanie#gallery">
           <Button className="mt-4 w-max" variant="secondary">
             Zobacz nasze realizacje
           </Button>

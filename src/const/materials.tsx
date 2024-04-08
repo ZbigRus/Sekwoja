@@ -71,7 +71,7 @@ export const MATERIALS_CATEGORIES: MaterialCategory[] = [
       content: (
         <Content
           paragraphs={[
-            "Nasze płyty meblowe, wykonane z wysokiej jakości płyty meblowej firmy Kronopol Żary Sp. z o.o., oferują bogatą gamę kolorystyczną. Dostępne są w grubościach 10mm, 18mm i 28mm, zapewniając łatwość obróbki oraz przyjazność dla środowiska (klasa higieny E1). Idealne do produkcji mebli i dekoracyjnego wykończenia wnętrz.",
+            "Nasze meble wykonujemy z wysokiej jakości płyt firm SwissKrono i Egger, oferujących bogatą gamę kolorystyczną i różnorodność strukturalną. Oferowane płyty są przyjazne dla środowiska – Atest Higieniczny E1 – oraz certyfikowane do bezpiecznego kontaktu z ludźmi i żywnością. Idealne do produkcji mebli i dekoracyjnego i praktycznego wykończenia wnętrz.",
           ]}
         />
       ),
@@ -82,11 +82,10 @@ export const MATERIALS_CATEGORIES: MaterialCategory[] = [
       content: (
         <p className="text-sm leading-relaxed">
           Nasze blaty kuchenne, dostarczane przez renomowane firmy, takie jak
-          Kronopol Żary Sp. z o.o., Pfleiderer oraz Biurostyl, oferują ponad 200
-          kolorów w połysku i matowych. Dostępne w różnych długościach i
-          grubościach (28mm i 38mm, nawet do 80mm na zamówienie). Odpowiednio
-          odporne na temperaturę, promienie UV, parę wodną, detergenty, a także
-          posiadające certyfikaty klas higieny E1, zdrowotnej i ogniowej,
+          SwissKrono, Egger, Pfleiderer oraz Biurostyl, oferują ogromny wybór
+          kolorów i struktur powierzchniowych. Odpowiednio odporne na
+          temperaturę, promienie UV, parę wodną, detergenty, a także posiadające
+          wymagane certyfikaty (higieny E1 oraz klasy zdrowotnej i ogniowej),
           gwarantują estetykę i funkcjonalność.
         </p>
       ),
@@ -143,7 +142,7 @@ export const MATERIALS_CATEGORIES: MaterialCategory[] = [
         <p className="text-sm leading-relaxed">
           Znajdź u nas wszystko, co potrzebujesz do stworzenia funkcjonalnego i
           estetycznego wnętrza. Nasze akcesoria meblowe obejmują szeroką gamę
-          produktów, spełniających najwyższe standardy branżowe."
+          produktów, spełniających najwyższe standardy branżowe.
         </p>
       ),
       media: [accDescSmall.src, accDescMedium.src, accDescBig.src],

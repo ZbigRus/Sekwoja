@@ -32,7 +32,7 @@ export default function Quality() {
           i godną najwyższego zaufania obsługę w zakresie doradztwa, pomiaru,
           projektu, transportu, montażu i serwisu.
         </p>
-        <Link href="/realizacje">
+        <Link href="/projektowanie#gallery">
           <Button asChild className="mt-4 w-max" variant="secondary">
             Pokaż więcej zdjęć
           </Button>

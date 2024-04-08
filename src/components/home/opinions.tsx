@@ -19,7 +19,7 @@ export default function Opinions() {
       </div>
       <Link
         className="mt-8 w-max text-white after:block after:h-[1px] after:bg-primary after:w-full after:max-w-[25%] after:transition-all hover:after:max-w-[50%] after:ml-auto"
-        href="/"
+        href="https://www.google.com/maps/place/Sekwoja.+Meble/@50.0614937,21.4432365,17z/data=!4m18!1m9!3m8!1s0x473d0970c2a79487:0x6294c8084be3d919!2sSekwoja.+Meble!8m2!3d50.0614937!4d21.4458114!9m1!1b1!16s%2Fg%2F12q4wtgjx!3m7!1s0x473d0970c2a79487:0x6294c8084be3d919!8m2!3d50.0614937!4d21.4458114!9m1!1b1!16s%2Fg%2F12q4wtgjx?entry=ttu"
       >
         Zobacz wszystkie opinie google
       </Link>

@@ -9,7 +9,7 @@ export default function Advantages() {
         dlaczego warto postawić na nas
       </p>
       <h2 className="font-medium text-2xl xl:text-3xl text-center text-white">
-        Co wyróżnia Sekwoje?
+        Co wyróżnia Sekwoję?
       </h2>
       <div className="flex flex-col sm:grid grid-cols-2 xl:grid-cols-4 mt-8 gap-6">
         {ADVANTAGES.map((adv, i) => (

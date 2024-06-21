@@ -6,11 +6,11 @@ import LivingRoomIcon from "@/assets/icons/furniture/living-room";
 import OfficeIcon from "@/assets/icons/furniture/office";
 import ShopIcon from "@/assets/icons/furniture/shop";
 import WardrobeIcon from "@/assets/icons/furniture/wardrobe";
-import { skeleton } from "@/assets/images";
 import {
   bathroom,
   bedroom,
   kitchen,
+  office,
   room,
   shop,
   upholstered,
@@ -114,7 +114,7 @@ export const CATEGORIES: Category[] = [
           ]}
         />
       ),
-      media: [skeleton.src],
+      media: [office.src],
     },
     desc: {
       title: "Meble biurowe",

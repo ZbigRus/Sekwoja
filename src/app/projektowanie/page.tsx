@@ -23,11 +23,13 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const { data: promo } = await getImages("voucher");
+  // const { data: promo } = await getImages("voucher");
   const { data, error } = await getImages(
-    undefined,
-    promo.mediaItems.nodes?.map((item: any) => item.id) || []
+    "projektowanie"
+    // promo.mediaItems.nodes?.map((item: any) => item.id) || []
   );
+
+  console.log({ data });
   return (
     <div>
       <Skeleton

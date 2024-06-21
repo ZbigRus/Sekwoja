@@ -3,7 +3,7 @@ import rtvHeroSmall from "./rtv-agd/hero-small.png";
 import platesHeroBig from "./plates-and-sheets/hero-big.png";
 import platesHeroSmall from "./plates-and-sheets/hero-small.png";
 import frontsHeroBig from "./fronts/hero-big.png";
-import frontsHeroSmall from "./fronts/hero-small.png";
+import frontsHeroSmall from "./fronts/hero-small.jpg";
 import accHeroBig from "./accessories/hero-big.png";
 
 import rtvDescSmall from "./rtv-agd/desc-small.png";

@@ -5,5 +5,15 @@ import room from "./room.png";
 import shop from "./shop.png";
 import bedroom from "./bedroom.png";
 import upholstered from "./upholstered.png";
+import office from "./office.png";
 
-export { bathroom, kitchen, wardrobe, room, shop, bedroom, upholstered };
+export {
+  bathroom,
+  kitchen,
+  wardrobe,
+  room,
+  shop,
+  bedroom,
+  upholstered,
+  office,
+};

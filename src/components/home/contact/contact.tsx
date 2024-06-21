@@ -80,7 +80,7 @@ function InfoBox() {
               <ClockIcon />
               <span className="sr-only">Godziny otwarcia</span>
             </dt>
-            <dd className="font-medium">Pon - Pt (8:00 - 17:00)</dd>
+            <dd className="font-medium">Pon - Pt (8:00 - 16:00)</dd>
           </div>
           <div className="flex items-center gap-2">
             <dt className="w-[1.5ch]">
@@ -88,13 +88,6 @@ function InfoBox() {
               <span className="sr-only">Godziny otwarcia</span>
             </dt>
             <dd className="font-medium">Sob (9:00 - 13:00)</dd>
-          </div>
-          <div className="flex items-center gap-2 fill-secondary">
-            <dt className="w-[1.5ch]">
-              <ContactPhoneIcon />
-              <span className="sr-only">Numer telefonu</span>
-            </dt>
-            <dd className="font-medium">+48 14 681 18 89</dd>
           </div>
           <div className="flex items-center gap-2">
             <dt className="w-[1.5ch]">
@@ -161,7 +154,7 @@ function InfoBox() {
               <ContactPhoneIcon />
               <span className="sr-only">Numer telefonu</span>
             </dt>
-            <dd className="font-medium">+48 695 931 070</dd>
+            <dd className="font-medium">+48 695 931 070</dd>
           </div>
         </dl>
       </div>

@@ -7,7 +7,7 @@ export const DESIGN_ADVANTAGES: {
     desc: "Nasi specjaliści wyposażeni są w najnowsze oprogramowanie do aranżacji wnętrz.",
   },
   {
-    title: "Wycena jesze szybciej",
+    title: "Wycena jeszcze szybciej",
     desc: "Dzięki zastosowaniu oprogramowania PRO100 nasze wyceny i aranżacje trafiają do klienta jeszcze szybciej niż dotychczas.",
   },
   {

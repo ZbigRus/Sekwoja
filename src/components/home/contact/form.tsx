@@ -2,21 +2,24 @@
 
 import Input from "@/components/ui/input";
 import { sendMail } from "@/lib/contact/actions";
-import { useTransition } from "react";
+import { useRef, useTransition } from "react";
 import toast from "react-hot-toast";
 import MessagesIcon from "@/assets/icons/messages";
 import Button from "@/components/ui/button";
 
 export default function Form({ defaultType }: { defaultType?: string }) {
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [isPending, startTransition] = useTransition();
 
   return (
     <form
+      ref={formRef}
       className="flex flex-col gap-x-4 gap-y-6 sm:grid grid-cols-2 w-full"
       action={(data) => {
         startTransition(async () => {
           const isOk = await sendMail(data);
           if (isOk) {
+            formRef.current?.reset();
             toast.success(
               "Twoja wiadomość została przesłana! Dziękujemy za kontakt"
             );

@@ -4,7 +4,9 @@ import PostRef from "./ref";
 export default async function PostsList({
   suggestion,
   exclude,
+  limit,
 }: {
+  limit?: number;
   suggestion?: boolean;
   exclude?: string;
 }) {

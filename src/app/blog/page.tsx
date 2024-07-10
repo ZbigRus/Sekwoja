@@ -2,7 +2,6 @@ import Blog from "@/components/home/blog";
 import Opinions from "@/components/home/opinions";
 import Partners from "@/components/home/partners";
 import Contact from "@/components/home/contact/contact";
-import { getPosts } from "@/lib/blog/actions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,10 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const { data } = await getPosts();
   return (
     <div>
-      <Blog posts={data?.posts?.nodes || []} hideButton />
+      <Blog hideButton />
       <Opinions />
       <Partners />
       <Contact />

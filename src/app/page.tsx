@@ -15,8 +15,6 @@ import { getImages } from "@/lib/[type]/actions";
 import { getPosts } from "@/lib/blog/actions";
 
 export default async function Home() {
-  const { data: posts } = await getPosts(3);
-  console.log(posts.posts.nodes);
   const { data: media } = await getImages("voucher");
   return (
     <div className="flex flex-col">
@@ -28,7 +26,7 @@ export default async function Home() {
       <AGD />
       <Kitchen />
       <Advantages />
-      <Blog posts={posts?.posts?.nodes || []} />
+      <Blog limit={3} />
       <Sofa />
       <Furniture />
       <Partners />

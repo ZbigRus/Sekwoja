@@ -48,7 +48,7 @@ export default async function Page({ params }: Props) {
           ></div>
         </div>
       </div>
-      <Blog exclude={data.post.id} suggestion />
+      <Blog exclude={data.post.id} limit={3} suggestion />
       <Banner />
       <Partners />
       <Contact />

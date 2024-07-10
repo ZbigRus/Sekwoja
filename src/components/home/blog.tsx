@@ -8,11 +8,13 @@ import PostsList from "./blog/list";
 export default function Blog({
   suggestion,
   exclude,
+  limit,
   hideButton,
 }: {
   hideButton?: boolean;
   suggestion?: boolean;
   exclude?: string;
+  limit?: number;
 }) {
   return (
     <section
@@ -29,7 +31,7 @@ export default function Blog({
         Skarbnica pomysłów na wyjątkowe wnętrza i długotrwałe meble
       </p>
       <Suspense fallback={<PostLoader />}>
-        <PostsList exclude={exclude} suggestion={suggestion} />
+        <PostsList exclude={exclude} suggestion={suggestion} limit={limit} />
       </Suspense>
       {!hideButton && (
         <Link href="/blog">

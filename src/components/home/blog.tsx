@@ -7,10 +7,12 @@ import PostsList from "./blog/list";
 
 export default function Blog({
   suggestion,
+  exclude,
   hideButton,
 }: {
   hideButton?: boolean;
   suggestion?: boolean;
+  exclude?: string;
 }) {
   return (
     <section
@@ -27,7 +29,7 @@ export default function Blog({
         Skarbnica pomysłów na wyjątkowe wnętrza i długotrwałe meble
       </p>
       <Suspense fallback={<PostLoader />}>
-        <PostsList />
+        <PostsList exclude={exclude} suggestion={suggestion} />
       </Suspense>
       {!hideButton && (
         <Link href="/blog">

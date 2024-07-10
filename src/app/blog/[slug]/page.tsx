@@ -23,7 +23,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const { slug } = params;
   const { data, error } = await getSinglePost(slug);
-  const { data: recent } = await getPosts(3, data.post.id);
 
   if (error) throw new Error(error);
 
@@ -49,7 +48,7 @@ export default async function Page({ params }: Props) {
           ></div>
         </div>
       </div>
-      <Blog posts={recent?.posts?.nodes || []} suggestion />
+      <Blog exclude={data.post.id} suggestion />
       <Banner />
       <Partners />
       <Contact />

@@ -3,10 +3,12 @@ import PostRef from "./ref";
 
 export default async function PostsList({
   suggestion,
+  exclude,
 }: {
   suggestion?: boolean;
+  exclude?: string;
 }) {
-  const { data } = await getPosts(3);
+  const { data } = await getPosts(3, exclude);
 
   const posts = data?.posts?.nodes || [];
 

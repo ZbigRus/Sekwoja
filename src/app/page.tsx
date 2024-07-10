@@ -16,6 +16,7 @@ import { getPosts } from "@/lib/blog/actions";
 
 export default async function Home() {
   const { data: posts } = await getPosts(3);
+  console.log(posts.posts.nodes);
   const { data: media } = await getImages("voucher");
   return (
     <div className="flex flex-col">

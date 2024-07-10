@@ -1,21 +1,17 @@
 import ArrowRightIcon from "@/assets/icons/arrow-right";
-import CalendarIcon from "@/assets/icons/calendar";
-import Image from "next/image";
 import Link from "next/link";
 import Button from "../ui/button";
 import { Suspense } from "react";
 import PostLoader from "./blog/post-loader";
+import PostsList from "./blog/list";
 
 export default function Blog({
-  posts,
   suggestion,
   hideButton,
 }: {
-  posts: Post[];
   hideButton?: boolean;
   suggestion?: boolean;
 }) {
-  if (posts.length === 0) return;
   return (
     <section
       className={`flex flex-col gap-4 px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1in] ${
@@ -31,11 +27,7 @@ export default function Blog({
         Skarbnica pomysłów na wyjątkowe wnętrza i długotrwałe meble
       </p>
       <Suspense fallback={<PostLoader />}>
-        <div className="flex flex-col md:grid grid-cols-3 mt-8 gap-8">
-          {posts.map((item) => (
-            <PostRef {...item} suggestion={suggestion} key={item.uri} />
-          ))}
-        </div>
+        <PostsList />
       </Suspense>
       {!hideButton && (
         <Link href="/blog">
@@ -50,54 +42,5 @@ export default function Blog({
         </Link>
       )}
     </section>
-  );
-}
-
-function PostRef({
-  title,
-  uri,
-  date,
-  featuredImage,
-  suggestion,
-  excerpt,
-}: Post & { suggestion?: boolean }) {
-  return (
-    <div
-      className={`${
-        suggestion ? "bg-white" : "bg-light"
-      } rounded-xl overflow-hidden grid grid-rows-[2in_1fr]`}
-    >
-      <div className="w-full h-full relative">
-        {featuredImage && (
-          <Image
-            fill
-            sizes="33vw"
-            className="object-cover"
-            src={featuredImage.node.sourceUrl}
-            alt=""
-          />
-        )}
-      </div>
-      <div className="px-8 py-10 flex flex-col gap-4">
-        <div className="flex items-center gap-2 fill-secondary">
-          <CalendarIcon />
-          <span className="text-sm opacity-80">
-            {new Date(date).toLocaleDateString()}
-          </span>
-        </div>
-        <h3 className="text-xl">{title}</h3>
-        <div
-          className="opacity-80 text-sm mb-2 line-clamp-3"
-          dangerouslySetInnerHTML={{ __html: excerpt }}
-        ></div>
-        <Link
-          href={`/blog${uri}`}
-          className="stroke-secondary flex items-center gap-2 text-sm mt-auto"
-        >
-          Czytaj całość
-          <ArrowRightIcon />
-        </Link>
-      </div>
-    </div>
   );
 }

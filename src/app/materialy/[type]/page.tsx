@@ -39,7 +39,7 @@ export default async function Page({ params }: Props) {
           activeClassName="font-medium text-white"
         />
       </div>
-      <Hero {...hero} />
+      <Hero {...hero} type={params.type} />
       <Desc {...desc} />
       <Nav />
       <Opinions />

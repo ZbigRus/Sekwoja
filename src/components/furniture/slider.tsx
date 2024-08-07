@@ -64,12 +64,7 @@ export default function Slider({
               className="items-center w-max gap-4 transition-transform sm:flex hidden"
             >
               {media.map((item, i) => (
-                <ImageRef
-                  {...item}
-                  handleChange={() => setIndex(i)}
-                  isActive={index === i}
-                  key={`media:${i}`}
-                />
+                <ImageRef {...item} isActive={index === i} key={`media:${i}`} />
               ))}
             </div>
             <div
@@ -79,18 +74,13 @@ export default function Slider({
               className="flex items-center w-max gap-4 transition-transform sm:hidden"
             >
               {media.map((item, i) => (
-                <ImageRef
-                  {...item}
-                  handleChange={() => setIndex(i)}
-                  isActive={index === i}
-                  key={`media:${i}`}
-                />
+                <ImageRef {...item} isActive={index === i} key={`media:${i}`} />
               ))}
             </div>
             {index > 0 && (
               <button
                 onClick={() => setIndex((prev) => prev - 1)}
-                className="rounded-full bg-white shadow stroke-font absolute left-4 h-12 w-12 flex items-center justify-center sm:hidden"
+                className="rounded-full bg-white shadow stroke-font absolute sm:left-[12vw] left-4 h-12 w-12 flex items-center justify-center"
               >
                 <div className="-rotate-180">
                   <ArrowRightIcon />
@@ -100,7 +90,7 @@ export default function Slider({
             {index < media.length - 1 && (
               <button
                 onClick={() => setIndex((prev) => prev + 1)}
-                className="rounded-full bg-white shadow stroke-font absolute right-8 h-12 w-12 flex items-center justify-center sm:hidden"
+                className="rounded-full bg-white shadow stroke-font absolute right-4 sm:right-[12vw] h-12 w-12 flex items-center justify-center"
               >
                 <ArrowRightIcon />
               </button>
@@ -117,10 +107,8 @@ const ImageRef = ({
   sourceUrl,
   altText,
   isActive,
-  handleChange,
-}: Media & { isActive: boolean; handleChange: () => void }) => (
-  <button
-    onClick={handleChange}
+}: Media & { isActive: boolean }) => (
+  <div
     className={`relative h-[45vh] sm:h-[65vh] w-screen sm:w-[68vw] transition-transform ${
       isActive ? "scale-100" : "scale-90"
     }`}
@@ -137,5 +125,5 @@ const ImageRef = ({
         isActive ? "opacity-0" : "opacity-100"
       }`}
     ></div>
-  </button>
+  </div>
 );

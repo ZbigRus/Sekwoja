@@ -20,12 +20,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
-  const { data } = await getPosts();
-  const posts: Post[] = data?.posts?.nodes || [];
-  return posts.map(({ uri }) => ({ slug: uri.split("/").pop() }));
-}
-
 export default async function Page({ params }: Props) {
   const { slug } = params;
   const { data, error } = await getSinglePost(slug);

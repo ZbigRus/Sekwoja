@@ -25,6 +25,12 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
+export function generateStaticParams() {
+  return MATERIALS_CATEGORIES.map(({ link }) => ({
+    type: link.split("/").pop(),
+  }));
+}
+
 export default async function Page({ params }: Props) {
   const props = MATERIALS_CATEGORIES.find(
     (item) => item.link === `/materialy/${params.type}`

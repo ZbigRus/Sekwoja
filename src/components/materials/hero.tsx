@@ -1,7 +1,12 @@
 import { brushPattern } from "@/assets/images";
 import Image from "next/image";
 
-export default function Hero({ title, content, media }: Section) {
+export default function Hero({
+  title,
+  content,
+  media,
+  type,
+}: Section & { type: string }) {
   return (
     <section
       className="px-[8vw] md:px-[4vw] 2xl:px-[16vw] pt-[1in] pb-[0.6in] lg:py-[1.6in] flex flex-col lg:grid grid-cols-2 gap-16 2xl:gap-32 lg:items-center bg-background-dark"
@@ -10,6 +15,11 @@ export default function Hero({ title, content, media }: Section) {
       }}
     >
       <div className="flex flex-col gap-4">
+        {type === "rtv-agd" && (
+          <h3 className="text-lg xl:text-xl text-primary font-medium">
+            5 lat gwarancji na sprzęt AGD
+          </h3>
+        )}
         <h2 className="font-medium text-2xl xl:text-3xl mb-4 select-none text-white">
           {title}
         </h2>

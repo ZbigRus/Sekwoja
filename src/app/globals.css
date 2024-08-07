@@ -13,17 +13,17 @@ body {
 }
 
 #content img {
-  width: 100% !important;
   max-height: 5in;
   object-position: center;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-#content figure {
-  margin: 1rem 0;
+  object-fit: contain;
 }
 
 #content p {
   line-height: 200%;
+}
+
+#content .wp-block-image {
+  margin: 1rem 0;
+  background-color: #f7f8f8;
+  border-radius: 8px;
 }

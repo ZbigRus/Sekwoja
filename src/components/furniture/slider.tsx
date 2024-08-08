@@ -109,19 +109,24 @@ const ImageRef = ({
   isActive,
 }: Media & { isActive: boolean }) => (
   <div
-    className={`relative h-[45vh] sm:h-[65vh] w-screen sm:w-[68vw] transition-transform ${
+    className={`relative h-[45vh] sm:h-[65vh] w-screen overflow-hidden sm:w-[68vw] transition-transform ${
       isActive ? "scale-100" : "scale-90"
     }`}
   >
     <Image
-      className="object-cover sm:rounded"
+      className="object-contain object-center relative z-20"
       fill
       sizes="(max-width: 640px) 100vw, 68vw"
       src={sourceUrl}
       alt={altText}
     />
     <div
-      className={`absolute bg-[#111B16]/55 inset-0 w-full h-full transition-opacity ${
+      style={{ backgroundImage: `url('${sourceUrl}')` }}
+      className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded"
+    ></div>
+    <div className="absolute bg-font/70 inset-0 w-full h-full transition-opacity z-10"></div>
+    <div
+      className={`absolute bg-[#111B16]/55 z-20 inset-0 w-full h-full transition-opacity ${
         isActive ? "opacity-0" : "opacity-100"
       }`}
     ></div>

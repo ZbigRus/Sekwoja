@@ -124,7 +124,7 @@ const ImageRef = ({
       style={{ backgroundImage: `url('${sourceUrl}')` }}
       className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded"
     ></div>
-    <div className="absolute bg-font/85 inset-0 w-full h-full transition-opacity z-10"></div>
+    <div className="absolute bg-font/70 inset-0 w-full h-full transition-opacity z-10"></div>
     <div
       className={`absolute bg-[#111B16]/55 z-20 inset-0 w-full h-full transition-opacity ${
         isActive ? "opacity-0" : "opacity-100"

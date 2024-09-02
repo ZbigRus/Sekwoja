@@ -8,6 +8,8 @@ import { redirect } from "next/navigation";
 
 type Props = { params: { type: string } };
 
+export const revalidate = 3600;
+
 export function generateMetadata({ params }: Props): Metadata {
   const props = CATEGORIES.find(
     (item) => item.link === `/meble/${params.type}`

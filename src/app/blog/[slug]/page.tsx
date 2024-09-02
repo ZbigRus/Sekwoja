@@ -8,6 +8,8 @@ import { Metadata } from "next";
 
 type Props = { params: { slug: string } };
 
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data, error } = await getSinglePost(params.slug);
   if (error) return {};

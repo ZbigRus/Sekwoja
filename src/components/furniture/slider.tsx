@@ -122,7 +122,7 @@ const ImageRef = ({
     />
     <div
       style={{ backgroundImage: `url('${sourceUrl}')` }}
-      className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded"
+      className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded bg-center"
     ></div>
     <div className="absolute bg-font/70 inset-0 w-full h-full transition-opacity z-10"></div>
     <div

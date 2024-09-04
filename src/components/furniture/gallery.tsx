@@ -25,47 +25,75 @@ export default function Gallery({
       </div>
       {media.length > 0 && (
         <div className="flex flex-col lg:grid grid-cols-[3fr_1fr_3fr] gap-4">
-          <div className={`relative h-72 lg:h-[30rem] col-span-3`}>
+          <div
+            className={`relative h-72 lg:h-[30rem] col-span-3 sm:rounded overflow-hidden`}
+          >
             <Image
-              className="object-cover sm:rounded"
+              className="object-contain sm:rounded relative z-20"
               fill
               sizes="100vw"
               src={media[0].sourceUrl}
               alt={media[0].altText}
               loading="eager"
             />
+            <div
+              style={{ backgroundImage: `url('${media[0].sourceUrl}')` }}
+              className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded bg-center"
+            ></div>
+            <div className="absolute inset-0 z-10 w-full h-full bg-black/60"></div>
           </div>
           {media.length > 1 && (
-            <div className={`relative h-72 lg:h-[20rem]`}>
+            <div
+              className={`relative h-72 lg:h-[20rem] sm:rounded overflow-hidden`}
+            >
               <Image
-                className="object-cover sm:rounded"
+                className="object-contain sm:rounded relative z-20"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 src={media[1].sourceUrl}
                 alt={media[1].altText}
               />
+              <div
+                style={{ backgroundImage: `url('${media[1].sourceUrl}')` }}
+                className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded bg-center"
+              ></div>
+              <div className="absolute inset-0 z-10 w-full h-full bg-black/60"></div>
             </div>
           )}
           {media.length > 2 && (
-            <div className={`relative h-72 lg:h-[20rem] col-span-2`}>
+            <div
+              className={`relative h-72 lg:h-[20rem] col-span-2 sm:rounded overflow-hidden`}
+            >
               <Image
-                className="object-cover sm:rounded"
+                className="object-contain sm:rounded relative z-20"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 src={media[2].sourceUrl}
                 alt={media[2].altText}
               />
+              <div
+                style={{ backgroundImage: `url('${media[2].sourceUrl}')` }}
+                className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded bg-center"
+              ></div>
+              <div className="absolute inset-0 z-10 w-full h-full bg-black/60"></div>
             </div>
           )}
           {media.length > 3 && (
-            <div className={`relative h-72 lg:h-[20rem] col-span-2`}>
+            <div
+              className={`relative h-72 lg:h-[20rem] col-span-2 sm:rounded overflow-hidden`}
+            >
               <Image
-                className="object-cover sm:rounded"
+                className="object-contain sm:rounded relative z-20"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 src={media[3].sourceUrl}
                 alt={media[3].altText}
               />
+              <div
+                style={{ backgroundImage: `url('${media[3].sourceUrl}')` }}
+                className="bg-cover absolute inset-0 w-full h-full transition-opacity blur-sm sm:rounded bg-center"
+              ></div>
+              <div className="absolute inset-0 z-10 w-full h-full bg-black/60"></div>
             </div>
           )}
           {media.length > 4 && <Slider media={media} title={title} />}

@@ -10,12 +10,13 @@ export async function getQuery(
     )}`;
     const response = await fetch(url, options);
     const json = await response.json();
+    console.log("ERROR", json.errors);
     return {
       data: json.data,
       error: json.errors?.length > 0 ? json.errors[0].message : null,
     };
   } catch (err) {
-    console.log({ err });
+    console.log("ERROR", err);
     return {
       error: "Error",
       data: null,

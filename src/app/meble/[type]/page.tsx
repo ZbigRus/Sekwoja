@@ -24,20 +24,20 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export function generateStaticParams() {
-  return CATEGORIES.map(({ link }) => ({
-    type: link.split("/").pop(),
-  }));
-}
+// export function generateStaticParams() {
+//   return CATEGORIES.map(({ link }) => ({
+//     type: link.split("/").pop(),
+//   }));
+// }
 
 export default async function Page({ params }: Props) {
   const props = CATEGORIES.find(
     (item) => item.link === `/meble/${params.type}`
   );
-  if (!props) return redirect("/meble");
+  if (!props) redirect("/meble");
   const { hero, desc } = props;
   const { data, error } = await getImages(params.type);
-  if (error) return redirect("/meble");
+  if (error) redirect("/meble");
   return (
     <div>
       <Skeleton {...hero} />

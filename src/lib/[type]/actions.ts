@@ -26,6 +26,6 @@ export async function getImages(
     }
   }
     `;
-  const response = await getQuery(query);
+  const response = await getQuery(query, { next: { revalidate: 3600 } });
   return response;
 }

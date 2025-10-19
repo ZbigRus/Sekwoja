@@ -37,7 +37,7 @@ const SUCCESS_MESSAGE = {
 } as const;
 
 export async function getIPAddress() {
-  return headers().get('x-forwarded-for') ?? 'unknown';
+  return (await headers()).get('x-forwarded-for') ?? 'unknown';
 }
 
 async function validateTurnstile(token: string) {

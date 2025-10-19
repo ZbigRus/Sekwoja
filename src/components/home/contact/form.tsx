@@ -6,6 +6,8 @@ import { useRef, useTransition } from "react";
 import toast from "react-hot-toast";
 import MessagesIcon from "@/assets/icons/messages";
 import Button from "@/components/ui/button";
+import { Turnstile } from "@marsidev/react-turnstile";
+import { TURNSTILE_SITE_KEY } from "@/consts";
 
 export default function Form({ defaultType }: { defaultType?: string }) {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -78,6 +80,7 @@ export default function Form({ defaultType }: { defaultType?: string }) {
         </label>
       </div>
       <input type="hidden" value="form" name="source" />
+      <Turnstile siteKey={TURNSTILE_SITE_KEY} />
       <Button disabled={isPending} className="w-max mt-4">
         <MessagesIcon /> Wyślij wiadomość
       </Button>

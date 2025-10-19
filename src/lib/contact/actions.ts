@@ -2,6 +2,8 @@
 
 import nodemailer from "nodemailer";
 
+const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY ?? "";
+
 const user = process.env.EMAIL_SENDER;
 const recipient = process.env.EMAIL_RECIPIENT;
 const pass = process.env.EMAIL_PASSWORD;
@@ -17,6 +19,36 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+import { headers } from "next/headers";
+export async function getIPAddress() {
+    return headers().get("x-forwarded-for") ?? 'unknown';
+}
+
+async function validateTurnstile(token: string) {
+  const remoteip = await getIPAddress();
+
+  const formData = new FormData();
+  formData.append("secret", TURNSTILE_SECRET_KEY);
+  formData.append("response", token);
+  formData.append("remoteip", remoteip);
+
+  try {
+    const response = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error("Turnstile validation error:", error);
+    return { success: false, "error-codes": ["internal-error"] };
+  }
+}
+
 export async function sendMail(data: FormData) {
   "use server";
   const firstName = data.get("first-name")?.toString();
@@ -25,6 +57,9 @@ export async function sendMail(data: FormData) {
   const phone = data.get("phone")?.toString();
   const message = data.get("message")?.toString();
   const type = data.get("type")?.toString();
+  const token = data.get("cf-turnstile-response")?.toString() ?? 'unknown';
+
+      const validation = await validateTurnstile(token);
 
   try {
     const info = await new Promise((resolve, reject) => {
@@ -97,9 +132,11 @@ Sekwoja
 export async function sendChatMail({
   message,
   email,
+  token,
 }: {
   message: string;
   email: string;
+  token: string;
 }) {
   try {
     const info = await new Promise((resolve, reject) => {

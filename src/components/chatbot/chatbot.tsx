@@ -2,7 +2,9 @@
 
 import SendIcon from "@/assets/icons/send";
 import { logo } from "@/assets/images";
+import { TURNSTILE_SITE_KEY } from "@/consts";
 import { sendChatMail } from "@/lib/contact/actions";
+import { Turnstile } from "@marsidev/react-turnstile";
 import Image from "next/image";
 import { FormEvent, useRef, useState, useTransition } from "react";
 import toast from "react-hot-toast";
@@ -17,12 +19,20 @@ export default function ChatBot() {
     email: "",
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (step === 0) return setStep((prev) => prev + 1);
+
+    const formData = new FormData(e.currentTarget);
+    const token = formData.get("cf-turnstile-response")?.toString() ?? "unknown";
+
     startTransition(async () => {
       const { email, message } = data;
-      const isOk = await sendChatMail({ message, email });
+      const isOk = await sendChatMail({
+        message,
+        email,
+        token,
+      });
       if (isOk) {
         toast.success(
           "Twoja wiadomość została przesłana! Dziękujemy za kontakt"
@@ -107,6 +117,7 @@ export default function ChatBot() {
                 : "Wpisz tutaj swoją wiadomość"
             }
           />
+          <Turnstile siteKey={TURNSTILE_SITE_KEY} />
           <button
             disabled={isPending}
             className="h-9 w-9 disabled:opacity-80 bg-white rounded absolute right-4 grid place-content-center"

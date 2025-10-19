@@ -119,7 +119,7 @@ export default function ChatBot() {
               }
             />
             <button
-              type="button"
+              type="submit"
               disabled={isPending}
               className="h-10 w-10 disabled:opacity-80 bg-white rounded absolute pl-3 place-content-center right-4"
             >

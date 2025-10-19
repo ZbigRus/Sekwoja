@@ -10,7 +10,9 @@ type Props = { params: Promise<{ slug: string }> };
 
 export const revalidate = 3600;
 
-export async function generateMetadata({ params: promiseParams }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params: promiseParams,
+}: Props): Promise<Metadata> {
   const params = await promiseParams;
 
   const { data, error } = await getSinglePost(params.slug);
@@ -32,7 +34,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params: promiseParams }: Props) {
   const params = await promiseParams;
-  
+
   const { slug } = params;
   const { data, error } = await getSinglePost(slug);
 

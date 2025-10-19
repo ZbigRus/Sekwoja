@@ -12,7 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-    <div />
-  );
+  return <div />;
 }

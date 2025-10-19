@@ -11,9 +11,11 @@ import { MATERIALS_CATEGORIES } from '@/const/materials';
 
 type Props = { params: Promise<{ type: string }> };
 
-export async function generateMetadata({ params: promiseParams }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params: promiseParams,
+}: Props): Promise<Metadata> {
   const params = await promiseParams;
-  
+
   const props = MATERIALS_CATEGORIES.find(
     (item) => item.link === `/materialy/${params.type}`,
   );
@@ -35,7 +37,7 @@ export function generateStaticParams() {
 
 export default async function Page({ params: promiseParams }: Props) {
   const params = await promiseParams;
-  
+
   const props = MATERIALS_CATEGORIES.find(
     (item) => item.link === `/materialy/${params.type}`,
   );

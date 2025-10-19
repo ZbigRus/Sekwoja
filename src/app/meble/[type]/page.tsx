@@ -10,7 +10,9 @@ type Props = { params: Promise<{ type: string }> };
 
 export const revalidate = 3600;
 
-export async function generateMetadata({ params: promiseParams }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params: promiseParams,
+}: Props): Promise<Metadata> {
   const params = await promiseParams;
 
   const props = CATEGORIES.find(

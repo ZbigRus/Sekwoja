@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Slider({ media }: { media: Media[] }) {
   const [index, setIndex] = useState(0);
@@ -11,12 +11,12 @@ export default function Slider({ media }: { media: Media[] }) {
   useEffect(() => {
     timer.current = window.setTimeout(
       () => setIndex((prev) => (prev === 0 ? 1 : 0)),
-      5000
+      5000,
     );
     return () => {
       timer.current && window.clearTimeout(timer.current);
     };
-  }, [index]);
+  }, []);
 
   return (
     <div className="overflow-hidden h-[6in] rounded-md flex flex-col items-center relative z-10">
@@ -32,9 +32,10 @@ export default function Slider({ media }: { media: Media[] }) {
       <div className="absolute bottom-8 flex items-center gap-2 z-10">
         {Array.from(Array(media.length)).map((_, i) => (
           <button
+            type="button"
             onClick={() => setIndex(i)}
             className={`h-2.5 w-2.5 rounded-full transition-colors ${
-              i === index ? "bg-primary" : "bg-white"
+              i === index ? 'bg-primary' : 'bg-white'
             }`}
             key={i}
           />

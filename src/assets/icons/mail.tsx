@@ -6,7 +6,9 @@ export default function MailIcon() {
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona maila"
     >
+      <title>Ikona maila</title>
       <path
         d="M1.80273 5.2951L8.99973 8.89435L16.1967 5.2966C16.1703 4.83789 15.9695 4.40665 15.6354 4.09123C15.3013 3.77582 14.8592 3.6001 14.3997 3.6001H3.59973C3.14051 3.60008 2.69864 3.77558 2.36458 4.09069C2.03052 4.40579 1.82952 4.83666 1.80273 5.2951Z"
         fill="#019843"

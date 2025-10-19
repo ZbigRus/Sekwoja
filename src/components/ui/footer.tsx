@@ -1,11 +1,11 @@
-import { LINKS } from "@/const/general";
-import NavLink from "./nav-link";
-import Image from "next/image";
-import { logo } from "@/assets/images";
-import Link from "next/link";
-import FacebookIcon from "@/assets/icons/fb";
-import InstagramIcon from "@/assets/icons/ig";
-import ScrollButton from "./scroll-button";
+import Image from 'next/image';
+import Link from 'next/link';
+import FacebookIcon from '@/assets/icons/fb';
+import InstagramIcon from '@/assets/icons/ig';
+import { logo } from '@/assets/images';
+import { LINKS } from '@/const/general';
+import NavLink from './nav-link';
+import ScrollButton from './scroll-button';
 
 export default function Footer() {
   return (

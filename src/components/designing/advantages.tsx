@@ -1,7 +1,7 @@
-import CheckIcon from "@/assets/icons/check";
-import TriangleIcon from "@/assets/icons/triangle";
-import { DESIGN_ADVANTAGES } from "@/const/designing";
-import Slider from "./slider";
+import CheckIcon from '@/assets/icons/check';
+import TriangleIcon from '@/assets/icons/triangle';
+import { DESIGN_ADVANTAGES } from '@/const/designing';
+import Slider from './slider';
 
 export default function Advantages({ media }: { media: Media[] }) {
   return (

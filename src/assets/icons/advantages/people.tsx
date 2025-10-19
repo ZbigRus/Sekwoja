@@ -6,7 +6,9 @@ export default function PeopleIcon() {
       viewBox="0 0 88 88"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona ludzie"
     >
+      <title>Ikona ludzie</title>
       <path
         d="M85.3204 49.7566C76.0756 35.6008 77.0582 21.0906 72.602 14.2681C68.1458 7.4457 54.8651 -4.31696 23.4858 16.1797C-7.89357 36.6764 0.0875456 58.9575 4.9911 66.4595C27.9395 101.591 101.696 74.8268 85.3204 49.7566Z"
         fill="#EFEFEF"

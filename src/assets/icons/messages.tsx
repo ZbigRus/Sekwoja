@@ -6,7 +6,9 @@ export default function MessagesIcon() {
       viewBox="0 0 14 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona wiadomości"
     >
+      <title>Ikona wiadomości</title>
       <g clipPath="url(#clip0_1_1008)">
         <path
           d="M11.5117 4.34766V8.44922H4.83589L3.30859 9.50462V11.7305H9.42014L12.332 13.7428V11.7305H14V4.34766H11.5117ZM11.5117 10.0898H5.76953V9.26953H11.5117V10.0898Z"

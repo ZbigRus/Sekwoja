@@ -1,5 +1,5 @@
-import ArrowRightIcon from "@/assets/icons/arrow-right";
-import Link from "next/link";
+import Link from 'next/link';
+import ArrowRightIcon from '@/assets/icons/arrow-right';
 
 export default function CategoryRef({
   index,
@@ -13,8 +13,8 @@ export default function CategoryRef({
       href={link}
       className={`bg-white [&:nth-child(4n-3)]:bg-[#F7F8F8] [&:nth-child(4n)]:bg-[#F7F8F8] ${
         index > 3
-          ? "lg:even:bg-[#F7F8F8] lg:odd:!bg-white"
-          : "lg:odd:bg-[#F7F8F8] lg:even:!bg-white"
+          ? 'lg:even:bg-[#F7F8F8] lg:odd:!bg-white'
+          : 'lg:odd:bg-[#F7F8F8] lg:even:!bg-white'
       } border-collapse border-[1px] border-[#F7F8F8] py-10 px-[8vw] sm:px-8 flex flex-col gap-5 group`}
     >
       <Icon />

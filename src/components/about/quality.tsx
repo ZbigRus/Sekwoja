@@ -1,12 +1,8 @@
-import Image from "next/image";
-import Button from "../ui/button";
-import {
-  kitchenLeftCenter,
-  kitchenRightBottom,
-  kitchenRightTop,
-} from "@/assets/images/kitchen/kitchen";
-import Link from "next/link";
-import { s1img1, s1img2 } from "@/assets/images/about";
+import Image from 'next/image';
+import Link from 'next/link';
+import { s1img1, s1img2 } from '@/assets/images/about';
+
+import Button from '../ui/button';
 
 export default function Quality() {
   return (
@@ -16,7 +12,7 @@ export default function Quality() {
           Jakość, Styl, Szybka Obsługa - Meble,
           <div className="inline-block after:block after:h-[3px] after:bg-primary after:w-full after:max-w-[75%] after:transition-all hover:after:max-w-[50%] after:ml-auto">
             <span>spełniające</span>
-          </div>{" "}
+          </div>{' '}
           Twoje oczekiwania
         </h2>
         <p className="text-sm text-[#0C1611]/80 font-medium">

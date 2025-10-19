@@ -6,7 +6,9 @@ export default function TableIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona stołu"
     >
+      <title>Ikona stołu</title>
       <g clip-path="url(#clip0_3558_5325)">
         <path
           d="M33.4257 7.57031H4.57431C2.36427 7.57031 0.505615 9.10078 0 11.1572H38C37.4944 9.10078 35.6357 7.57031 33.4257 7.57031Z"

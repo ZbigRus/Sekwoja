@@ -6,7 +6,9 @@ export default function QualityIcon() {
       viewBox="0 0 86 88"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona jakość"
     >
+      <title>Ikona jakość</title>
       <path
         d="M7.41411 58.3809C22.2299 66.5282 28.1846 79.7966 35.3223 83.7224C42.4626 87.6482 59.713 91.7867 77.7726 58.9431C95.8321 26.0995 78.3128 10.1886 70.4588 5.86931C33.6894 -14.3463 -18.8246 43.9538 7.41411 58.3809Z"
         fill="#EFEFEF"

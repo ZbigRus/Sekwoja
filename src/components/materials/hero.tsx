@@ -1,5 +1,5 @@
-import { brushPattern } from "@/assets/images";
-import Image from "next/image";
+import Image from 'next/image';
+import { brushPattern } from '@/assets/images';
 
 export default function Hero({
   title,
@@ -15,7 +15,7 @@ export default function Hero({
       }}
     >
       <div className="flex flex-col gap-4">
-        {type === "rtv-agd" && (
+        {type === 'rtv-agd' && (
           <h3 className="text-lg xl:text-xl text-primary font-medium">
             5 lat gwarancji na sprzęt AGD
           </h3>
@@ -29,13 +29,13 @@ export default function Hero({
         <div
           className={`grid sm:grid-rows-[2.5in_6rem_4rem] grid-rows-[1.5in_6rem_4rem] ${
             media.length > 1
-              ? "gap-4 grid-cols-[3rem_12rem_1fr]"
-              : "grid-cols-[1fr] sm:grid-rows-[3in] grid-rows-[2in]"
+              ? 'gap-4 grid-cols-[3rem_12rem_1fr]'
+              : 'grid-cols-[1fr] sm:grid-rows-[3in] grid-rows-[2in]'
           } w-full relative z-10`}
         >
           <div
             className={`relative ${
-              media.length > 1 ? "col-[2/4] row-[1/3]" : ""
+              media.length > 1 ? 'col-[2/4] row-[1/3]' : ''
             } rounded-md overflow-hidden`}
           >
             <Image

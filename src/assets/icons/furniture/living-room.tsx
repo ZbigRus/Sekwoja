@@ -6,7 +6,9 @@ export default function LivingRoomIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona salonu"
     >
+      <title>Ikona salonu</title>
       <path
         d="M33.5469 11.207V26.793H15.5859V11.207C13.1305 11.207 11.1328 13.2047 11.1328 15.6602V33.4727H13.3594V31.2461H35.7734V33.4727H38V15.6602C38 13.2047 36.0023 11.207 33.5469 11.207Z"
         fill="#019843"

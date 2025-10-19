@@ -1,7 +1,7 @@
-import { brushPattern } from "@/assets/images";
-import Image from "next/image";
+import Image from 'next/image';
+import { brushPattern } from '@/assets/images';
 
-type T = Omit<Section, "media">;
+type T = Omit<Section, 'media'>;
 interface Props extends T {
   media: Media[];
 }

@@ -1,6 +1,6 @@
-import PinIcon from "@/assets/icons/pin";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import PinIcon from '@/assets/icons/pin';
 
 export default function Vouchers({ media }: { media: Media[] }) {
   if (media.length === 0) return;
@@ -20,6 +20,7 @@ export default function Vouchers({ media }: { media: Media[] }) {
             />
           </div>
           <figcaption
+            /* biome-ignore lint/security/noDangerouslySetInnerHtml: Data comes from WordPress */
             dangerouslySetInnerHTML={{ __html: media[0].caption }}
             className="text-lg font-medium"
           ></figcaption>
@@ -42,6 +43,7 @@ export default function Vouchers({ media }: { media: Media[] }) {
               />
             </div>
             <figcaption
+              /* biome-ignore lint/security/noDangerouslySetInnerHtml: Data comes from WordPress */
               dangerouslySetInnerHTML={{ __html: media[1].caption }}
               className="text-lg font-medium"
             ></figcaption>

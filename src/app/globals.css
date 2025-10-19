@@ -1,6 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffd125;
+  --color-secondary: #019843;
+  --color-secondary-dark: #1a2921;
+  --color-light: #f7f8f8;
+  --color-font: #1c1c1c;
+  --color-background-dark: #111b16;
+  --color-background-light: #f7f3e5bf;
+
+  --animate-slide: slide 20s linear infinite;
+
+  @keyframes slide {
+    0% {
+      transform: translate(0%);
+    }
+    100% {
+      transform: translate(-100%);
+    }
+  }
+}
 
 body {
   color: "#1C1C1C";

@@ -1,12 +1,12 @@
-import CalendarIcon from "@/assets/icons/calendar";
-import Button from "./button";
-import PhoneIcon from "@/assets/icons/phone";
-import Image from "next/image";
-import { logo } from "@/assets/images";
-import Link from "next/link";
-import Nav from "./nav";
-import InstagramIcon from "@/assets/icons/ig";
-import FacebookIcon from "@/assets/icons/fb";
+import Image from 'next/image';
+import Link from 'next/link';
+import CalendarIcon from '@/assets/icons/calendar';
+import FacebookIcon from '@/assets/icons/fb';
+import InstagramIcon from '@/assets/icons/ig';
+import PhoneIcon from '@/assets/icons/phone';
+import { logo } from '@/assets/images';
+import Button from './button';
+import Nav from './nav';
 
 export default function Header() {
   return (

@@ -1,11 +1,11 @@
-import bathroom from "./bathroom.png";
-import kitchen from "./kitchen.png";
-import wardrobe from "./wardrobe.png";
-import room from "./room.png";
-import shop from "./shop.png";
-import bedroom from "./bedroom.png";
-import upholstered from "./upholstered.png";
-import office from "./office.png";
+import bathroom from './bathroom.png';
+import bedroom from './bedroom.png';
+import kitchen from './kitchen.png';
+import office from './office.png';
+import room from './room.png';
+import shop from './shop.png';
+import upholstered from './upholstered.png';
+import wardrobe from './wardrobe.png';
 
 export {
   bathroom,

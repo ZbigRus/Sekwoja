@@ -6,7 +6,9 @@ export default function BedIcon() {
       viewBox="0 0 38 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona łóżka"
     >
+      <title>Ikona łóżka</title>
       <path
         d="M0 31.6602H2.22656V28.2531H35.7734V31.6602H38V21.1211H0V31.6602Z"
         fill="#019843"

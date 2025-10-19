@@ -6,7 +6,9 @@ export default function CameraIcon() {
       viewBox="0 0 16 16"
       fill="inherit"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona kamery - przeglądaj wszystkie zdjęcia"
     >
+      <title>Ikona kamery - przeglądaj wszystkie zdjęcia</title>
       <path
         d="M8.00052 10.1334C9.17873 10.1334 10.1339 9.17824 10.1339 8.00003C10.1339 6.82182 9.17873 5.8667 8.00052 5.8667C6.82231 5.8667 5.86719 6.82182 5.86719 8.00003C5.86719 9.17824 6.82231 10.1334 8.00052 10.1334Z"
         fill="inherit"

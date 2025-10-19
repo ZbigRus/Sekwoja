@@ -1,5 +1,7 @@
-"use client";
+'use client';
 
+import Image from 'next/image';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import {
   slider1,
   slider2,
@@ -9,9 +11,7 @@ import {
   slider7,
   slider8,
   slider9,
-} from "@/assets/images/hero/hero";
-import Image from "next/image";
-import { Fragment, useEffect, useRef, useState } from "react";
+} from '@/assets/images/hero/hero';
 
 const IMAGES = [
   slider1,
@@ -36,7 +36,7 @@ export default function ImageSlider({
     timer.current = window.setTimeout(
       () =>
         setCurrentImage((prev) => (prev >= IMAGES.length - 1 ? 0 : prev + 1)),
-      5000
+      5000,
     );
     return () => {
       timer.current && window.clearTimeout(timer.current);
@@ -64,9 +64,10 @@ export default function ImageSlider({
       <div className="absolute right-[8vw] bottom-4 lg:relative lg:right-0 flex flex-col gap-3 justify-self-end z-10">
         {Array.from(Array(IMAGES.length)).map((_item, i) => (
           <button
+            type="button"
             onClick={() => setCurrentImage(i)}
             className={`rounded-full h-3 w-3 ${
-              currentImage === i ? "bg-primary" : "bg-white"
+              currentImage === i ? 'bg-primary' : 'bg-white'
             }`}
             key={i}
           />

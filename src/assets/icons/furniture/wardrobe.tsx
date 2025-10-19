@@ -6,7 +6,9 @@ export default function WardrobeIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona szafy"
     >
+      <title>Ikona szafy</title>
       <g clipPath="url(#clip0_1_873)">
         <path
           d="M2.22656 0V38H17.8827V0H2.22656ZM13.9966 20.6821C13.3724 20.6821 12.9103 20.1721 12.8833 19.5688C12.8564 18.9678 13.4142 18.4555 13.9966 18.4555C14.6205 18.4555 15.0829 18.9658 15.1099 19.5688C15.1369 20.1701 14.5791 20.6821 13.9966 20.6821Z"

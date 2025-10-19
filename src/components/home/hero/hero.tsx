@@ -1,16 +1,16 @@
-import CalendarIcon from "@/assets/icons/calendar";
-import Button from "../../ui/button";
-import PhoneIcon from "@/assets/icons/phone";
-import ImageSlider from "./image-slider";
-import Link from "next/link";
+import Link from 'next/link';
+import CalendarIcon from '@/assets/icons/calendar';
+import PhoneIcon from '@/assets/icons/phone';
+import Button from '../../ui/button';
+import ImageSlider from './image-slider';
 
 export default function Hero() {
   return (
     <section className="bg-background-dark min-h-[90vh] lg:min-h-[70vh] lg:px-[8vw] 2xl:px-[16vw] flex flex-col lg:grid grid-cols-2 lg:items-center relative">
       <ImageSlider>
         <div className="flex flex-col gap-4 relative z-10 py-16 lg:py-0 px-[8vw] md:px-[4vw] lg:px-0 order-first">
-          <h1 className="font-semibold text-3xl xl:text-4xl 2xl:text-[40px] 2xl:leading-[46px] text-white">
-            Stwórz swoją wymarzoną przestrzeń z naszymi meblami
+          <h1 className="font-semibold text-3xl xl:text-4xl 2xl:text-[40px] 2xl:leading-[46px] text-white pr-2">
+            Stwórz swoją wymarzoną przestrzeń z&nbsp;naszymi meblami
           </h1>
           <p className="text-[#ECECEC] font-medium">
             Projektujemy i dostarczamy wyjątkowe meble, które nadadzą Twojemu

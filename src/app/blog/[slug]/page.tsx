@@ -1,20 +1,22 @@
-import CalendarIcon from "@/assets/icons/calendar";
-import Banner from "@/components/home/banner";
-import Partners from "@/components/home/partners";
-import { getPosts, getSinglePost } from "@/lib/blog/actions";
-import Contact from "@/components/home/contact/contact";
-import Blog from "@/components/home/blog";
-import { Metadata } from "next";
+import type { Metadata } from 'next';
+import CalendarIcon from '@/assets/icons/calendar';
+import Banner from '@/components/home/banner';
+import Blog from '@/components/home/blog';
+import Contact from '@/components/home/contact/contact';
+import Partners from '@/components/home/partners';
+import { getPosts, getSinglePost } from '@/lib/blog/actions';
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export const revalidate = 3600;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params: promiseParams }: Props): Promise<Metadata> {
+  const params = await promiseParams;
+
   const { data, error } = await getSinglePost(params.slug);
   if (error) return {};
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ""),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ''),
     title: `${data.post.title} | Sekwoja - Meble na wymiar`,
     openGraph: {
       title: `${data.post.title} | Sekwoja - Meble na wymiar`,
@@ -25,10 +27,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export async function generateStaticParams() {
   const { data } = await getPosts();
   const posts: Post[] = data?.posts?.nodes || [];
-  return posts.map(({ uri }) => ({ slug: uri.replace(/\//g, "") }));
+  return posts.map(({ uri }) => ({ slug: uri.replace(/\//g, '') }));
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params: promiseParams }: Props) {
+  const params = await promiseParams;
+  
   const { slug } = params;
   const { data, error } = await getSinglePost(slug);
 
@@ -52,6 +56,7 @@ export default async function Page({ params }: Props) {
           <div
             id="content"
             className="flex flex-col gap-4"
+            /* biome-ignore lint/security/noDangerouslySetInnerHtml: Data comes from WordPress */
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
         </div>

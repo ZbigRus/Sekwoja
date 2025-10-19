@@ -1,7 +1,7 @@
-import ArrowRightIcon from "@/assets/icons/arrow-right";
-import CalendarIcon from "@/assets/icons/calendar";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import ArrowRightIcon from '@/assets/icons/arrow-right';
+import CalendarIcon from '@/assets/icons/calendar';
 
 export default function PostRef({
   title,
@@ -14,7 +14,7 @@ export default function PostRef({
   return (
     <div
       className={`${
-        suggestion ? "bg-white" : "bg-light"
+        suggestion ? 'bg-white' : 'bg-light'
       } rounded-xl overflow-hidden grid grid-rows-[2in_1fr]`}
     >
       <div className="w-full h-full relative">
@@ -38,6 +38,7 @@ export default function PostRef({
         <h3 className="text-xl">{title}</h3>
         <div
           className="opacity-80 text-sm mb-2 line-clamp-3"
+          /* biome-ignore lint/security/noDangerouslySetInnerHtml: Data comes from WordPress */
           dangerouslySetInnerHTML={{ __html: excerpt }}
         ></div>
         <Link

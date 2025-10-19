@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { LINKS } from "@/const/general";
-import { MATERIALS_CATEGORIES } from "@/const/materials";
-import { CATEGORIES } from "@/const/products";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Fragment } from "react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Fragment } from 'react';
+import { LINKS } from '@/const/general';
+import { MATERIALS_CATEGORIES } from '@/const/materials';
+import { CATEGORIES } from '@/const/products';
 
 type Props = {
   className?: string;
@@ -14,10 +14,10 @@ type Props = {
 
 export default function Breadcrumbs({
   className,
-  activeClassName = "text-secondary",
+  activeClassName = 'text-secondary',
 }: Props) {
   const pathname = usePathname();
-  const pagesArr = pathname.split("/").filter((item) => item);
+  const pagesArr = pathname.split('/').filter((item) => item);
   const [, subpage] = pagesArr;
   const pageTitle = LINKS.find((item) => pathname.startsWith(item.href))?.title;
   const subpageTitle =
@@ -27,7 +27,7 @@ export default function Breadcrumbs({
     <div className={`flex items-center gap-2 text-sm font-medium ${className}`}>
       <Link href="/">Strona główna</Link>
       <span> - </span>
-      <span className={subpage ? "" : activeClassName}>{pageTitle}</span>
+      <span className={subpage ? '' : activeClassName}>{pageTitle}</span>
       {subpage && (
         <Fragment>
           <span> - </span>

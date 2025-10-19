@@ -6,7 +6,9 @@ export default function ShopIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona sklepu"
     >
+      <title>Ikona sklepu</title>
       <path d="M0 35.7646H38V37.9999H0V35.7646Z" fill="#019843" />
       <path d="M2.33594 0H35.6642V4.47059H2.33594V0Z" fill="#019843" />
       <path

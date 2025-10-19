@@ -1,9 +1,9 @@
-import TriangleIcon from "@/assets/icons/triangle";
-import Button from "../ui/button";
-import Image from "next/image";
-import Link from "next/link";
-import { slider1 } from "@/assets/images/hero/hero";
-import { s2img1 } from "@/assets/images/about";
+import Image from 'next/image';
+import Link from 'next/link';
+import TriangleIcon from '@/assets/icons/triangle';
+import { s2img1 } from '@/assets/images/about';
+import { slider1 } from '@/assets/images/hero/hero';
+import Button from '../ui/button';
 
 export default function LearnMore() {
   return (

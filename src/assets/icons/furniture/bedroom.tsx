@@ -6,7 +6,9 @@ export default function BedroomIcon() {
       viewBox="0 0 38 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona sypialni"
     >
+      <title>Ikona sypialni</title>
       <path
         d="M31.345 15.6309V13.1998C31.345 11.8392 30.2382 10.7324 28.8777 10.7324H22.1666C21.2194 10.7324 20.1133 11.3786 20.1133 13.1998V15.6309H31.345Z"
         fill="#019843"

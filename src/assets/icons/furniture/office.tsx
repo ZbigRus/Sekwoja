@@ -6,7 +6,9 @@ export default function OfficeIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona biura"
     >
+      <title>Ikona biura</title>
       <path
         d="M17.8867 24.6406V14.6211C17.8867 11.6681 15.507 9.05469 12.3203 9.05469C9.12913 9.05469 6.75391 11.669 6.75391 14.6211V24.6406H11.207V26.8672H6.75391V29.0938H11.207V33.5469H6.75391V38H8.98047V35.7734H15.6602V38H17.8867V33.5469H13.4336V29.0938H17.8867V26.8672H13.4336V24.6406H17.8867Z"
         fill="#019843"

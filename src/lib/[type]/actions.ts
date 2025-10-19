@@ -1,8 +1,8 @@
-import { getQuery } from "../blog/actions";
+import { getQuery } from '../blog/actions';
 
 export async function getImages(
   type?: string,
-  exclude?: string[]
+  exclude?: string[],
 ): Promise<QueryResponse> {
   const query = `
   {
@@ -10,10 +10,10 @@ export async function getImages(
       type
         ? `(where: { title: "${type}"}, first: 100)`
         : exclude?.length
-        ? `(where: { notIn: [${exclude?.map(
-            (item) => `"${item}"`
-          )}] }, first: 100)`
-        : ""
+          ? `(where: { notIn: [${exclude?.map(
+              (item) => `"${item}"`,
+            )}] }, first: 100)`
+          : ''
     } {
       nodes {
         id

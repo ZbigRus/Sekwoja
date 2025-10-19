@@ -1,5 +1,5 @@
-import { PARTNERS } from "@/assets/images/partners/partners";
-import Image from "next/image";
+import Image from 'next/image';
+import { PARTNERS } from '@/assets/images/partners/partners';
 
 export default function Partners() {
   return (

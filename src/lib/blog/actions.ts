@@ -1,24 +1,33 @@
-"use server";
+'use server';
 
 export async function getQuery(
   query: string,
-  options?: RequestInit
+  options?: RequestInit,
 ): Promise<QueryResponse> {
   try {
     const url = `${process.env.WORDPRESS_API_URL}?query=${encodeURIComponent(
-      query
+      query,
     )}`;
     const response = await fetch(url, options);
     const json = await response.json();
-    console.log("ERROR", json.errors);
+    if (json.errors) {
+      console.log('ERROR while querying url', {
+        url,
+        errors: json.errors,
+      });
+    }
+
     return {
       data: json.data,
       error: json.errors?.length > 0 ? json.errors[0].message : null,
     };
   } catch (err) {
-    console.log("ERROR", err);
+    console.log('ERROR while querying', {
+      query,
+      err,
+    });
     return {
-      error: "Error",
+      error: 'Error',
       data: null,
     };
   }
@@ -30,8 +39,8 @@ export async function getPosts(limit?: number, exclude?: string) {
       ? `(first: ${limit}, where: { notIn: "${exclude}" })`
       : `(first: ${limit})`
     : exclude
-    ? `(where: { notIn: "${exclude}" })`
-    : "";
+      ? `(where: { notIn: "${exclude}" })`
+      : '';
   const query = `
   {
       posts${filter} {

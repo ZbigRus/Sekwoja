@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import Input from "@/components/ui/input";
-import { sendMail } from "@/lib/contact/actions";
-import { useRef, useTransition } from "react";
-import toast from "react-hot-toast";
-import MessagesIcon from "@/assets/icons/messages";
-import Button from "@/components/ui/button";
-import { Turnstile } from "@marsidev/react-turnstile";
-import { TURNSTILE_SITE_KEY } from "@/consts";
+import { Turnstile } from '@marsidev/react-turnstile';
+import { useRef, useTransition } from 'react';
+import toast from 'react-hot-toast';
+import MessagesIcon from '@/assets/icons/messages';
+import Button from '@/components/ui/button';
+import Input from '@/components/ui/input';
+import { TURNSTILE_SITE_KEY } from '@/consts';
+import { sendMail } from '@/lib/contact/actions';
 
 export default function Form({ defaultType }: { defaultType?: string }) {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -19,14 +19,12 @@ export default function Form({ defaultType }: { defaultType?: string }) {
       className="flex flex-col gap-x-4 gap-y-6 sm:grid grid-cols-2 w-full"
       action={(data) => {
         startTransition(async () => {
-          const isOk = await sendMail(data);
-          if (isOk) {
+          const { status, message } = await sendMail(data);
+          if (status === 'success') {
             formRef.current?.reset();
-            toast.success(
-              "Twoja wiadomość została przesłana! Dziękujemy za kontakt"
-            );
+            toast.success(message);
           } else {
-            toast.error("Wystąpił błąd. Spróbuj ponownie później.");
+            toast.error(message);
           }
         });
       }}
@@ -59,7 +57,7 @@ export default function Form({ defaultType }: { defaultType?: string }) {
             name="type"
             value="measurement"
             id="measurement"
-            defaultChecked={defaultType !== "call"}
+            defaultChecked={defaultType !== 'call'}
             required
           />
           <span className="select-none">Zamawiam pomiar</span>
@@ -73,17 +71,21 @@ export default function Form({ defaultType }: { defaultType?: string }) {
             name="type"
             value="call"
             id="call"
-            defaultChecked={defaultType === "call"}
+            defaultChecked={defaultType === 'call'}
             required
           />
           <span className="select-none">Zamawiam rozmowę</span>
         </label>
       </div>
       <input type="hidden" value="form" name="source" />
-      <Turnstile siteKey={TURNSTILE_SITE_KEY} />
-      <Button disabled={isPending} className="w-max mt-4">
-        <MessagesIcon /> Wyślij wiadomość
-      </Button>
+      <div className="col-span-2 flex items-center gap-4">
+        <Button disabled={isPending} className="w-max mt-4">
+          <MessagesIcon /> Wyślij wiadomość
+        </Button>
+      </div>
+      <div className="col-span-2 flex items-center gap-4">
+        <Turnstile siteKey={TURNSTILE_SITE_KEY} />
+      </div>
     </form>
   );
 }

@@ -1,22 +1,24 @@
-import Desc from "@/components/furniture/desc";
-import Gallery from "@/components/furniture/gallery";
-import Skeleton from "@/components/ui/skeleton";
-import { CATEGORIES } from "@/const/products";
-import { getImages } from "@/lib/[type]/actions";
-import { Metadata } from "next";
-import { redirect } from "next/navigation";
+import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
+import Desc from '@/components/furniture/desc';
+import Gallery from '@/components/furniture/gallery';
+import Skeleton from '@/components/ui/skeleton';
+import { CATEGORIES } from '@/const/products';
+import { getImages } from '@/lib/[type]/actions';
 
-type Props = { params: { type: string } };
+type Props = { params: Promise<{ type: string }> };
 
 export const revalidate = 3600;
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateMetadata({ params: promiseParams }: Props): Promise<Metadata> {
+  const params = await promiseParams;
+
   const props = CATEGORIES.find(
-    (item) => item.link === `/meble/${params.type}`
+    (item) => item.link === `/meble/${params.type}`,
   );
   if (!props) return {};
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ""),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ''),
     title: `${props.title} | Sekwoja - Meble na wymiar`,
     openGraph: {
       title: `${props.title} | Sekwoja - Meble na wymiar`,
@@ -30,14 +32,16 @@ export function generateMetadata({ params }: Props): Metadata {
 //   }));
 // }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params: promiseParams }: Props) {
+  const params = await promiseParams;
+
   const props = CATEGORIES.find(
-    (item) => item.link === `/meble/${params.type}`
+    (item) => item.link === `/meble/${params.type}`,
   );
-  if (!props) redirect("/meble");
+  if (!props) redirect('/meble');
   const { hero, desc } = props;
   const { data, error } = await getImages(params.type);
-  if (error) redirect("/meble");
+  if (error) redirect('/meble');
   return (
     <div>
       <Skeleton {...hero} />

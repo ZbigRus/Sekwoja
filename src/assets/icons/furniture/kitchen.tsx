@@ -6,7 +6,9 @@ export default function KitchenIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona kuchni"
     >
+      <title>Ikona kuchni</title>
       <path
         d="M0.00878906 38H15.6616V29.0238H0.00878906V38ZM3.4322 31.3483H12.3123V33.5738H3.4322V31.3483Z"
         fill="#019843"

@@ -1,7 +1,7 @@
-import { brushPattern } from "@/assets/images";
-import Button from "../../ui/button";
-import ImageSlider from "./image-slider";
-import Link from "next/link";
+import Link from 'next/link';
+import { brushPattern } from '@/assets/images';
+import Button from '../../ui/button';
+import ImageSlider from './image-slider';
 
 export default function Furniture() {
   return (
@@ -15,7 +15,7 @@ export default function Furniture() {
         >
           <div className="flex flex-col gap-4">
             <h2 className="font-medium text-2xl xl:text-3xl mb-4 select-none text-white">
-              Zaaranżujmy twoją przestrzeń razem - meble{" "}
+              Zaaranżujmy twoją przestrzeń razem - meble{' '}
               <div className="inline-block after:block after:h-[3px] after:bg-primary after:w-full after:max-w-[75%] after:transition-all hover:after:max-w-[50%] after:ml-auto">
                 <span>najwyższej jakości</span>
               </div>

@@ -1,13 +1,13 @@
-import Image from "next/image";
-import Button from "../ui/button";
-import CalendarIcon from "@/assets/icons/calendar";
-import Slider from "./slider";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import CalendarIcon from '@/assets/icons/calendar';
+import Button from '../ui/button';
+import Slider from './slider';
 
 export default function Gallery({
   media,
   title,
-}: { media: Media[] } & Pick<Section, "title">) {
+}: { media: Media[] } & Pick<Section, 'title'>) {
   return (
     <section
       id="gallery"

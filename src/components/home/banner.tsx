@@ -1,8 +1,8 @@
-import CalendarIcon from "@/assets/icons/calendar";
-import Button from "../ui/button";
-import Image from "next/image";
-import { slider1 } from "@/assets/images/hero/hero";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import CalendarIcon from '@/assets/icons/calendar';
+import { slider1 } from '@/assets/images/hero/hero';
+import Button from '../ui/button';
 
 export default function Banner() {
   return (
@@ -17,7 +17,7 @@ export default function Banner() {
       </Link>
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
-          objectFit="cover"
+          className="object-cover"
           fill
           sizes="100vw"
           src={slider1}

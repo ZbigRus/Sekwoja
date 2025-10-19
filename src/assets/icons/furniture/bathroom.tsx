@@ -6,7 +6,9 @@ export default function BathroomIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona łazienki"
     >
+      <title>Ikona łazienki</title>
       <g clipPath="url(#clip0_1_902)">
         <path
           d="M11.2073 24.5664H15.4702C15.0104 25.8623 13.7719 26.793 12.3206 26.793C10.8692 26.793 9.631 25.8623 9.1709 24.5664H11.2073Z"

@@ -1,18 +1,18 @@
-import TriangleIcon from "@/assets/icons/triangle";
-import Button from "../ui/button";
-import Image from "next/image";
-import { sofaBig, sofaSmall } from "@/assets/images/sofa/sofa";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import TriangleIcon from '@/assets/icons/triangle';
+import { sofaBig, sofaSmall } from '@/assets/images/sofa/sofa';
+import Button from '../ui/button';
 
 export default function Sofa() {
   return (
     <section className="px-[8vw] md:px-[4vw] 2xl:px-[16vw] py-[0.6in] lg:py-[1.6in] flex flex-col lg:grid grid-cols-2 gap-16 2xl:gap-32 lg:items-center bg-[#F7F3E5]/75 relative">
       <div className="flex flex-col gap-4 relative z-10">
         <h2 className="font-medium text-2xl xl:text-3xl mb-4 select-none max-w-[5in]">
-          Odkryj naszą kolekcję{" "}
+          Odkryj naszą kolekcję{' '}
           <div className="inline-block after:block after:h-[3px] after:bg-primary after:w-full after:max-w-[75%] after:transition-all hover:after:max-w-[50%]">
             <span> wbudowanych mebli</span>
-          </div>{" "}
+          </div>{' '}
           pokojowych
         </h2>
         <p className="text-sm text-[#0C1611]/80 font-medium">

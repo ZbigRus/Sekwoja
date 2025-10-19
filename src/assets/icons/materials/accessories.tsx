@@ -6,7 +6,9 @@ export default function Accessories() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona akcesoriów"
     >
+      <title>Ikona akcesoriów</title>
       <g clip-path="url(#clip0_3558_5340)">
         <path
           d="M29.3977 8.6308C28.5893 8.6308 27.8608 8.28302 27.3533 7.72949C27.1612 7.83392 26.9727 7.94658 26.7894 8.06964C26.3462 8.36696 25.944 8.70955 25.5859 9.08829C26.5039 10.1694 27.8717 10.8573 29.3977 10.8573C30.0126 10.8573 30.511 10.3588 30.511 9.74401C30.511 9.12918 30.0126 8.6308 29.3977 8.6308Z"

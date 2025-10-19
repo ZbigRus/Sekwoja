@@ -1,15 +1,15 @@
-import CheckIcon from "@/assets/icons/check";
-import { slider1 } from "@/assets/images/hero/hero";
-import Image from "next/image";
+import Image from 'next/image';
+import CheckIcon from '@/assets/icons/check';
+import { slider1 } from '@/assets/images/hero/hero';
 
 const PRODUCTS = [
-  "Meble kuchenne nowoczesne i klasyczne",
-  "Szafy wnękowe i garderoby",
-  "Meble biurowe i sklepowe",
-  "Meble pokojowe i sypialniane",
-  "Meble łazienkowe",
-  "Komody, regały",
-  "Meble nietypowe według indywidualnych zamówień",
+  'Meble kuchenne nowoczesne i klasyczne',
+  'Szafy wnękowe i garderoby',
+  'Meble biurowe i sklepowe',
+  'Meble pokojowe i sypialniane',
+  'Meble łazienkowe',
+  'Komody, regały',
+  'Meble nietypowe według indywidualnych zamówień',
 ];
 
 export default function ProductsBanner() {
@@ -25,7 +25,7 @@ export default function ProductsBanner() {
       </div>
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
-          objectFit="cover"
+          className="object-cover"
           fill
           sizes="100vw"
           src={slider1}

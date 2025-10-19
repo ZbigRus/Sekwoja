@@ -1,11 +1,11 @@
-import ContactPhoneIcon from "@/assets/icons/contact-phone";
-import LocationIcon from "@/assets/icons/location";
-import MailIcon from "@/assets/icons/mail";
-import Image from "next/image";
-import { contactWoman } from "@/assets/images";
-import ClockIcon from "@/assets/icons/clock";
-import Form from "./form";
-import UserIcon from "@/assets/icons/user";
+import Image from 'next/image';
+import ClockIcon from '@/assets/icons/clock';
+import ContactPhoneIcon from '@/assets/icons/contact-phone';
+import LocationIcon from '@/assets/icons/location';
+import MailIcon from '@/assets/icons/mail';
+import UserIcon from '@/assets/icons/user';
+import { contactWoman } from '@/assets/images';
+import Form from './form';
 
 export default function Contact({
   defaultType,

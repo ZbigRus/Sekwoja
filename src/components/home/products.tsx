@@ -1,5 +1,5 @@
-import { CATEGORIES } from "@/const/products";
-import CategoryRef from "./category";
+import { CATEGORIES } from '@/const/products';
+import CategoryRef from './category';
 
 export default function Products() {
   return (

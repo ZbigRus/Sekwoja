@@ -1,6 +1,6 @@
-import StarIcon from "@/assets/icons/star";
-import { OPINIONS } from "@/const/opinions";
-import Link from "next/link";
+import Link from 'next/link';
+import StarIcon from '@/assets/icons/star';
+import { OPINIONS } from '@/const/opinions';
 
 export default function Opinions() {
   return (

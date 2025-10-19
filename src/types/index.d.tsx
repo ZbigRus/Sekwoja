@@ -1,3 +1,6 @@
+/* biome-ignore-all lint/correctness/noUnusedVariables: The variables are used in the code */
+/* biome-ignore-all lint/suspicious/noExplicitAny: This should be removed in the future */
+
 type NavLink = {
   title: string;
   href: string;
@@ -8,7 +11,7 @@ type Category = {
   icon: React.ReactNode;
   link: string;
   hero: Section;
-  desc: Omit<Section, "media">;
+  desc: Omit<Section, 'media'>;
 };
 
 type Section = {

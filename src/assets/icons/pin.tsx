@@ -6,7 +6,9 @@ export default function PinIcon() {
       viewBox="0 0 76 71"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona pinezki"
     >
+      <title>Ikona pinezki</title>
       <g opacity="0.62019" filter="url(#filter0_f_3423_5496)">
         <path
           d="M35.4402 54.4555C42.9107 57.6556 50.6425 59.3146 56.9346 59.0676C63.2267 58.8206 67.5637 56.6878 68.9914 53.1384C70.4192 49.589 68.8208 44.9138 64.5479 40.1412C60.275 35.3686 53.6775 30.8896 46.2069 27.6895C38.7364 24.4894 31.0046 22.8304 24.7125 23.0774C18.4204 23.3244 14.0834 25.4571 12.6557 29.0065C11.2279 32.5559 12.8263 37.2312 17.0992 42.0038C21.3721 46.7764 27.9696 51.2554 35.4402 54.4555Z"
@@ -31,8 +33,8 @@ export default function PinIcon() {
       </g>
       <path
         opacity="0.74038"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M32.6615 37.3005C36.4128 34.3072 37.4225 32.6113 36.8516 29.1689C35.2249 33.6283 32.8266 37.0459 32.6615 37.3005Z"
         fill="url(#paint4_radial_3423_5496)"
       />
@@ -41,8 +43,8 @@ export default function PinIcon() {
         fill="url(#paint5_radial_3423_5496)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M9.5 1.55981C3.52461 5.53259 1.81111 7.79109 2.26143 12.395C5.22534 6.44816 9.22288 1.8987 9.5 1.55981Z"
         fill="url(#paint6_radial_3423_5496)"
       />
@@ -54,9 +56,9 @@ export default function PinIcon() {
           width="82.8521"
           height="61.5391"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -75,9 +77,9 @@ export default function PinIcon() {
           width="41.1064"
           height="36.352"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -96,9 +98,9 @@ export default function PinIcon() {
           width="24.5927"
           height="24.6735"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"

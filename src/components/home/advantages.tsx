@@ -1,6 +1,6 @@
-import { slider1 } from "@/assets/images/hero/hero";
-import { ADVANTAGES } from "@/const/advantages";
-import Image from "next/image";
+import Image from 'next/image';
+import { slider1 } from '@/assets/images/hero/hero';
+import { ADVANTAGES } from '@/const/advantages';
 
 export default function Advantages() {
   return (
@@ -22,7 +22,7 @@ export default function Advantages() {
       </div>
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
-          objectFit="cover"
+          className="object-cover"
           fill
           sizes="100vw"
           src={slider1}
@@ -43,7 +43,7 @@ function AdvantageRef({
   return (
     <div
       className={`bg-white rounded-md border-[1px] border-[#F1F7F4] py-10 px-8 flex flex-col items-center gap-4 ${
-        isDown ? "xl:mt-8" : "h-max"
+        isDown ? 'xl:mt-8' : 'h-max'
       }`}
     >
       <Icon />

@@ -1,26 +1,26 @@
 export const LINKS: NavLink[] = [
   {
-    title: "O firmie",
-    href: "/o-firmie",
+    title: 'O firmie',
+    href: '/o-firmie',
   },
   {
-    title: "Meble",
-    href: "/meble",
+    title: 'Meble',
+    href: '/meble',
   },
   {
-    title: "Materiały",
-    href: "/materialy",
+    title: 'Materiały',
+    href: '/materialy',
   },
   {
-    title: "Projektowanie",
-    href: "/projektowanie",
+    title: 'Projektowanie',
+    href: '/projektowanie',
   },
   {
-    title: "Blog",
-    href: "/blog",
+    title: 'Blog',
+    href: '/blog',
   },
   {
-    title: "Kontakt",
-    href: "/kontakt",
+    title: 'Kontakt',
+    href: '/kontakt',
   },
 ];

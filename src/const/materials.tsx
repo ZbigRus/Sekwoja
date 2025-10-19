@@ -1,9 +1,7 @@
-import OfficeIcon from "@/assets/icons/furniture/office";
-import RTVAGDIcon from "@/assets/icons/materials/rtv-agd";
-import TableIcon from "@/assets/icons/materials/table";
-import MaterialWardrobeIcon from "@/assets/icons/materials/wardrobe";
-import { skeleton } from "@/assets/images";
-import { bedroom, upholstered, wardrobe } from "@/assets/images/[type]";
+import OfficeIcon from '@/assets/icons/furniture/office';
+import RTVAGDIcon from '@/assets/icons/materials/rtv-agd';
+import TableIcon from '@/assets/icons/materials/table';
+import MaterialWardrobeIcon from '@/assets/icons/materials/wardrobe';
 import {
   accDescBig,
   accDescMedium,
@@ -24,32 +22,32 @@ import {
   rtvDescSmall,
   rtvHeroBig,
   rtvHeroSmall,
-} from "@/assets/images/materials";
-import Content from "@/components/furniture/content";
+} from '@/assets/images/materials';
+import Content from '@/components/furniture/content';
 
-type T = Omit<Category, "desc">;
+type T = Omit<Category, 'desc'>;
 interface MaterialCategory extends T {
   desc: Section;
 }
 
 export const MATERIALS_CATEGORIES: MaterialCategory[] = [
   {
-    title: "RTV AGD",
-    link: "/materialy/rtv-agd",
+    title: 'RTV AGD',
+    link: '/materialy/rtv-agd',
     icon: <RTVAGDIcon />,
     hero: {
-      title: "Kompletowanie Sprzętów AGD - Klucz do Estetyki Kuchni",
+      title: 'Kompletowanie Sprzętów AGD - Klucz do Estetyki Kuchni',
       content: (
         <Content
           paragraphs={[
-            "Kompletowanie sprzętów AGD to istotne wyzwanie podczas aranżacji kuchni. Nie tylko pełnią one funkcje techniczne, ale także wpływają na estetykę pomieszczenia. Nowoczesny design i dopasowana kolorystyka sprzętu AGD doskonale współgrają z meblami, nadając kuchni elegancji. Dbałość o spójność kolorów, zarówno w przypadku dużych urządzeń, jak i mniejszych, takich jak czajnik czy ekspres do kawy, tworzy harmonijną całość.",
+            'Kompletowanie sprzętów AGD to istotne wyzwanie podczas aranżacji kuchni. Nie tylko pełnią one funkcje techniczne, ale także wpływają na estetykę pomieszczenia. Nowoczesny design i dopasowana kolorystyka sprzętu AGD doskonale współgrają z meblami, nadając kuchni elegancji. Dbałość o spójność kolorów, zarówno w przypadku dużych urządzeń, jak i mniejszych, takich jak czajnik czy ekspres do kawy, tworzy harmonijną całość.',
           ]}
         />
       ),
       media: [rtvHeroBig.src, rtvHeroSmall.src],
     },
     desc: {
-      title: "Odkryj Nowoczesność w Naszej Ofercie AGD i RTV",
+      title: 'Odkryj Nowoczesność w Naszej Ofercie AGD i RTV',
       content: (
         <p className="text-sm leading-relaxed">
           W naszej ofercie znajdziesz różnorodne urządzenia AGD i RTV od
@@ -63,22 +61,22 @@ export const MATERIALS_CATEGORIES: MaterialCategory[] = [
     },
   },
   {
-    title: "Płyty i blaty",
-    link: "/materialy/plyty-i-blaty",
+    title: 'Płyty i blaty',
+    link: '/materialy/plyty-i-blaty',
     icon: <TableIcon />,
     hero: {
-      title: "Płyty Meblowe  - Jakość i szeroka paleta kolorów",
+      title: 'Płyty Meblowe  - Jakość i szeroka paleta kolorów',
       content: (
         <Content
           paragraphs={[
-            "Nasze meble wykonujemy z wysokiej jakości płyt firm SwissKrono i Egger, oferujących bogatą gamę kolorystyczną i różnorodność strukturalną. Oferowane płyty są przyjazne dla środowiska – Atest Higieniczny E1 – oraz certyfikowane do bezpiecznego kontaktu z ludźmi i żywnością. Idealne do produkcji mebli i dekoracyjnego i praktycznego wykończenia wnętrz.",
+            'Nasze meble wykonujemy z wysokiej jakości płyt firm SwissKrono i Egger, oferujących bogatą gamę kolorystyczną i różnorodność strukturalną. Oferowane płyty są przyjazne dla środowiska – Atest Higieniczny E1 – oraz certyfikowane do bezpiecznego kontaktu z ludźmi i żywnością. Idealne do produkcji mebli i dekoracyjnego i praktycznego wykończenia wnętrz.',
           ]}
         />
       ),
       media: [platesHeroBig.src, platesHeroSmall.src],
     },
     desc: {
-      title: "Blaty Kuchenne - Estetyka i Funkcjonalność w Jednym",
+      title: 'Blaty Kuchenne - Estetyka i Funkcjonalność w Jednym',
       content: (
         <p className="text-sm leading-relaxed">
           Nasze blaty kuchenne, dostarczane przez renomowane firmy, takie jak
@@ -93,22 +91,22 @@ export const MATERIALS_CATEGORIES: MaterialCategory[] = [
     },
   },
   {
-    title: "Fronty",
-    link: "/materialy/fronty",
+    title: 'Fronty',
+    link: '/materialy/fronty',
     icon: <MaterialWardrobeIcon />,
     hero: {
-      title: "Fronty Meblowe - Elegancja i Funkcjonalność",
+      title: 'Fronty Meblowe - Elegancja i Funkcjonalność',
       content: (
         <Content
           paragraphs={[
-            "Nasze fronty meblowe idealnie uzupełniają każdą kuchnię, oferując różnorodność kolorów, wzorów oraz elementów uzupełniających. Dbamy o zgodność z najnowszymi trendami w meblarstwie, spełniając oczekiwania klientów.",
+            'Nasze fronty meblowe idealnie uzupełniają każdą kuchnię, oferując różnorodność kolorów, wzorów oraz elementów uzupełniających. Dbamy o zgodność z najnowszymi trendami w meblarstwie, spełniając oczekiwania klientów.',
           ]}
         />
       ),
       media: [frontsHeroBig.src, frontsHeroSmall.src],
     },
     desc: {
-      title: "Różnorodność Frontów Meblowych",
+      title: 'Różnorodność Frontów Meblowych',
       content: (
         <p className="text-sm leading-relaxed">
           Odkryj nasze fronty meblowe, proste i gięte, dostępne w różnych
@@ -122,22 +120,22 @@ export const MATERIALS_CATEGORIES: MaterialCategory[] = [
     },
   },
   {
-    title: "Akcesoria",
-    link: "/materialy/akcesoria",
+    title: 'Akcesoria',
+    link: '/materialy/akcesoria',
     icon: <OfficeIcon />,
     hero: {
-      title: "Kompletne Wyposażenie - Akcesoria Meblowe",
+      title: 'Kompletne Wyposażenie - Akcesoria Meblowe',
       content: (
         <Content
           paragraphs={[
-            "Zapewniamy różnorodne akcesoria meblowe, obejmujące systemy relingowe, oświetlenie meblowe, elementy do drzwi przesuwnych, uchwyty, prowadnice do szuflad, nóżki, kółka, narzędzia stolarskie, żaluzje, systemy kolumnowe, wieszaki, kleje i inne artykuły meblarskie. Znajdź kompletną gamę, by stworzyć funkcjonalne i estetyczne wnętrze.",
+            'Zapewniamy różnorodne akcesoria meblowe, obejmujące systemy relingowe, oświetlenie meblowe, elementy do drzwi przesuwnych, uchwyty, prowadnice do szuflad, nóżki, kółka, narzędzia stolarskie, żaluzje, systemy kolumnowe, wieszaki, kleje i inne artykuły meblarskie. Znajdź kompletną gamę, by stworzyć funkcjonalne i estetyczne wnętrze.',
           ]}
         />
       ),
       media: [accHeroBig.src],
     },
     desc: {
-      title: "Doskonała Funkcjonalność i Estetyka",
+      title: 'Doskonała Funkcjonalność i Estetyka',
       content: (
         <p className="text-sm leading-relaxed">
           Znajdź u nas wszystko, co potrzebujesz do stworzenia funkcjonalnego i

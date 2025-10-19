@@ -1,5 +1,5 @@
-import { MATERIALS_CATEGORIES } from "@/const/materials";
-import CategoryRef from "../home/category";
+import { MATERIALS_CATEGORIES } from '@/const/materials';
+import CategoryRef from '../home/category';
 
 export default function Nav() {
   return (

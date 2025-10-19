@@ -1,5 +1,5 @@
-import TriangleIcon from "@/assets/icons/triangle";
-import Image from "next/image";
+import Image from 'next/image';
+import TriangleIcon from '@/assets/icons/triangle';
 
 export default function Desc({ title, content, media }: Section) {
   return (

@@ -1,4 +1,4 @@
-import Breadcrumbs from "./breadcrumbs";
+import Breadcrumbs from './breadcrumbs';
 
 export default function Skeleton({ title, content, media }: Section) {
   return (

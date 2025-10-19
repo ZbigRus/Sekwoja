@@ -1,5 +1,5 @@
-import { agd, logo, maxKuchnieLogo } from "@/assets/images";
-import Image from "next/image";
+import Image from 'next/image';
+import { agd, logo, maxKuchnieLogo } from '@/assets/images';
 
 export default function AGD() {
   return (
@@ -11,7 +11,7 @@ export default function AGD() {
         <h2 className="flex items-center gap-[1ch] uppercase font-medium text-xl xl:text-2xl">
           <strong className="bg-secondary p-2 rounded font-medium">
             5 lat gwarancji
-          </strong>{" "}
+          </strong>{' '}
           na AGD!
         </h2>
         <p className="xl:text-lg font-medium text-center max-w-[4in] xl:max-w-[5in]">

@@ -6,7 +6,9 @@ export default function RTVAGDIcon() {
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-description="Ikona RTV AGD"
     >
+      <title>Ikona RTV AGD</title>
       <g clip-path="url(#clip0_3558_5329)">
         <path
           d="M32.7266 3.33984C32.7266 1.49825 31.2283 0 29.3867 0H8.60547C6.76388 0 5.26562 1.49825 5.26562 3.33984V12.7656H32.7266V3.33984Z"

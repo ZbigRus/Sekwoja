@@ -1,10 +1,9 @@
-import { getPosts } from "@/lib/blog/actions";
-import PostRef from "./ref";
+import { getPosts } from '@/lib/blog/actions';
+import PostRef from './ref';
 
 export default async function PostsList({
   suggestion,
   exclude,
-  limit,
 }: {
   limit?: number;
   suggestion?: boolean;
